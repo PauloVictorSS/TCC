@@ -1,0 +1,389 @@
+
+:root{
+    --color-background-first: #bdada0;
+    --color-background-secondy: #beaea1;
+}
+
+html, body{
+    overflow-x: hidden; /* Retirando a barra de bolagem da horizontal (caso apareça) */
+    height: 100%;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+    background-image: url('../imagens/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/** Boot CSS **/
+
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.w66{
+    padding: 0 10px;
+    width: 66%;
+}
+.w50{
+    width: 50%;
+}
+.w33{
+    width: 33%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both; /* Reseta todos os floats que foram usados*/
+}
+
+
+/** Menu CSS **/
+
+header{
+    padding: 40px 0;
+    background: white;
+}
+
+header .logo{
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+    font-size: 190%;
+}
+
+.mobile{
+    display: none; /* Fazendo o menu do mobile sumir */
+}
+
+nav.desktop ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav.desktop li{
+    font-size: 17px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav.desktop a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/** Banner CSS **/
+
+section.home div.banner{
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    min-height: 500px;
+    font-family: 'Belinda', cursive;
+}
+
+section.home div.banner div.text{
+    display: block;
+    width: 50%;
+    margin-top: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+section.home div.banner div.text h2{
+	font-size: 90px;
+	font-family: 'Dancing Script', cursive;
+}
+
+section.home div.banner div.text h3{
+	font-size: 25px;
+}
+
+
+/** Corpo CSS **/
+
+section.home div.corpo{
+    width: 100%;
+    background-color: white;
+    padding: 30px 30px;
+}
+
+section.home div.corpo div.galeria .banner-principal{
+    width: 100%;
+    height: 500px;
+    background-size: cover; /*Fazendo o background esticar até cobrir todo o container*/
+    position: relative;
+}
+
+section.home div.corpo div.galeria .banner-principal .banner-single{
+    
+    position: absolute; /* O elemento é posicionado em relação ao seu primeiro 
+                        elemento ancestral posicionado (não estático) */
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-left: 5%;
+}
+
+section.home div.corpo div.galeria div.bullets{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+section.home div.corpo div.galeria div.bullets span{
+    display: inline-block; /* Colocando todos os elementos um ao lado do outro */
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    margin: 0 10px;
+}
+
+section.home div.corpo div.galeria div.bullets span.active-slider{
+    background-color: #3D437A;
+}
+
+section.home div.corpo div#sobre{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+section.home div.corpo div#sobre p{
+    margin:0 60px;
+}
+
+section.home div.corpo div#sobre h1{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+}
+
+section.home div#contato{
+	background-image: url('../imagens/fundoForm.jpg');
+    width: 100%;
+    padding: 30px 0;
+    min-height: 700px;
+}
+
+section.home div#contato #divForm{
+	background-color: black;
+    display: block;
+	margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    padding: 30px 30px;
+    min-height: 550px;
+}
+section.home div#contato #divForm form{
+	display: block;
+	margin: 0 auto;
+    width: 80%;
+}
+
+section.home div#contato #divForm p,a{
+	color: white;
+    font: 700 15px 'Raleway' ;
+}
+
+section.home div#contato #divForm h1{
+	color: white;
+	font-family: 'Yellowtail', cursive;
+	font-size: 275%
+}
+
+section.home div#contato #divForm #divInput{
+    display: block;
+    margin: 0 auto;
+}
+
+section.home div#contato #divForm #divInput input{
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	width: 98.5%;
+    padding: 7px 7px;
+}
+
+section.home div#contato #divForm #divInput input+input{
+    margin-top: 5px;
+}
+
+
+section.home div#contato #divForm #mensagem{
+    display: block;
+    background-color: black;
+	color: white;
+	border: 1px solid white;
+	width: 50%;
+	resize: none;
+    height: 106px;
+    margin: 0 auto;
+    padding: 4px 4px;
+}
+
+section.home div#contato #divForm input[type=submit]{
+	text-decoration: none;
+	border:none;
+	background: none;
+	color: white;
+    cursor: pointer;
+    margin-top: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/** Rodapé CSS **/
+
+footer{
+    background: white;
+    padding: 20px 0;
+}
+
+footer p{
+    font-size: 17px;
+    color: black;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+    body{
+        background: none;
+        background-color: #DEB887;
+    }
+    header{
+        padding: 40px 0 15px;
+        background: white;
+    }
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+    nav.mobile ul{
+        top: 122px;
+        z-index: 2;
+        list-style-type: none;
+        position: absolute;
+        left: 0;
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+    nav.mobile li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 8px 0;
+        font-size: 17px;
+        background: white;
+    }
+    nav.mobile li:hover{
+        background: #f7f7f7;
+    }
+    nav.mobile li a {
+        display: block;
+        text-decoration: none;
+        color: #444;
+    }
+    .botao-menu-mobile{
+        cursor: pointer;
+        color: black;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .botao-menu-mobile i{
+        font-size: 50px;
+    }
+    header .logo{
+        padding-top: 8px;
+    }
+    section.home div.banner{
+        padding: 5px 5px;
+        min-height: 300px;
+    }
+    
+    section.home div.banner div.text{
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    section.home div.banner div.text h2{
+        font-size: 60px;
+    }
+    section.home div.banner div.text h3{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 850px){
+    section.home div.corpo div#sobre img{
+        display: none;
+    }
+    section.home div.corpo div#sobre div.w50{
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+}
+
+
+@media (max-width: 600px){
+    section.home div.corpo{
+        width: 100%;
+        background-color: white;
+        padding: 0;
+    }
+    section.home div.corpo div.galeria .banner-principal{
+        width: 100%;
+        height: 300px;
+        background-size: cover; /*Fazendo o background esticar até cobrir todo o container*/
+        position: relative;
+    }
+    section.home div.corpo div.galeria .banner-principal .banner-single{
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+}
