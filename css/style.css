@@ -222,6 +222,10 @@ section.home div#contato #divForm p,a{
     font: 700 15px 'Raleway' ;
 }
 
+section.home div#contato #divForm a:hover{
+    text-decoration: underline;
+}
+
 section.home div#contato #divForm h1{
 	color: white;
 	font-family: 'Yellowtail', cursive;
@@ -266,6 +270,10 @@ section.home div#contato #divForm input[type=submit]{
     cursor: pointer;
     margin-top: 20px;
 	font-family: 'Raleway', sans-serif;
+}
+
+section.home div#contato #divForm input[type=submit]:hover{
+    text-decoration: underline;
 }
 
 
@@ -330,6 +338,67 @@ section.login a:hover{
     text-decoration: underline;
 }
 
+
+/** Cadastro CSS **/
+
+section.cadastro{
+    display: block;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    background-color: black;
+}
+
+section.cadastro h1{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+section.cadastro form{
+    display: block;
+    margin: 30px auto;
+    width: 90%;
+}
+
+section.cadastro form .input-box{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section.cadastro .input-box label{
+    display: inline-block;
+    min-width: 70px;
+}
+
+section.cadastro .input-box input{
+    padding: 6px;
+    width: calc(100% - 74px);
+    border: none;
+}
+
+section.cadastro form input[type=submit]{
+    display: block;
+    margin: 40px auto 0;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+section.cadastro a{
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+section.cadastro a:hover{
+    text-decoration: underline;
+}
 
 
 /** Rodapé CSS **/

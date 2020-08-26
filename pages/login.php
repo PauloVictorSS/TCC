@@ -1,6 +1,6 @@
 <section class="login">
 	<h1>Login</h1>
-	<form action="#" method="GET" id="formLogin">
+	<form action="#" method="POST" id="formLogin">
 		<div class="input-box">
 			<label for='email'>Email:</label>
 			<input type="text" name="emailForm" placeholder="email" id="email">
@@ -11,5 +11,5 @@
 		</div>
 		<input type="submit" id="btnLogin" value="Logar">
 	</form>
-	<a href="<?php echo INCLUDE_PATH; ?>cadastro" id="aLogin">Não possui um cadastro? Crie um aqui!</a>
+	<a href="<?php echo INCLUDE_PATH; ?>cadastro" id="aLogin">Não possui um cadastro?</a>
 </section>

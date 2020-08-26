@@ -1,19 +1,28 @@
-
-		<div id="divCadastro">
-			<h1>_</h1>
-			<h1>Crie um Cadastro!</h1><br><br>
-			<form action="#" method="GET" id="formCadastro">
-				<label for='nome'>Nome:</label>
-				<input type="text" name="nomeForm" placeholder="Nome" class="inputCadastro" id="nome"><br><br>
-				<label for='tel'>Telefone:</label>
-				<input type="text" name="telForm" placeholder="Telefone" class="inputCadastro" id="tel"><br><br>
-				<label for='email'>Email:</label>
-				<input type="text" name="emailForm" placeholder="Email" class="inputCadastro" id="email"><br><br>
-				<label for='senha'>Senha:</label>
-				<input type="text" name="senhaForm" placeholder="Senha" class="inputCadastro" id="senha">
-				<br><br><br>
-				<input type="submit" id="btnCadastro" value="Cadastrar">
-			</form>
-			<br><br>
-			<a href="<?php echo INCLUDE_PATH; ?>login" id="aCadastro">Fazer Login</a><br><br>
+<section class="cadastro">
+	<h1>Crie um Cadastro!</h1>
+	<form action="#" method="POST">
+		<div class="input-box">
+			<label for='nome'>Nome:</label>
+			<input type="text" name="nomeForm" placeholder="Nome" id="nome">
 		</div>
+		<div class="input-box">
+			<label for="login">Login:</label>
+			<input type="text" name="login" placeholder="Usuário" id="login">
+		</div>
+		<div class="input-box">
+			<label for='senha'>Senha:</label>
+			<input type="password" name="senhaForm" placeholder="Senha"id="senha">
+		</div>
+		<div class="input-box">
+			<label for='tel'>Telefone:</label>
+			<input type="text" name="telForm" placeholder="Telefone" id="tel">
+		</div>
+		<div class="input-box">
+			<label for='email'>Email:</label>
+			<input type="text" name="emailForm" placeholder="Email" id="email">
+		</div>
+		
+		<input type="submit" id="btnCadastro" value="Cadastrar">
+	</form>
+	<a href="<?php echo INCLUDE_PATH; ?>login" id="aCadastro">Já tem cadastro?</a>
+</section>
