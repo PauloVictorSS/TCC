@@ -1,9 +1,3 @@
-
-:root{
-    --color-background-first: #bdada0;
-    --color-background-secondy: #beaea1;
-}
-
 html, body{
     overflow-x: hidden; /* Retirando a barra de bolagem da horizontal (caso apareça) */
     height: 100%;
@@ -65,7 +59,7 @@ img{
 /** Menu CSS **/
 
 header{
-    padding: 40px 0;
+    padding: 20px 0;
     background: white;
 }
 
@@ -277,6 +271,41 @@ section.home div#contato #divForm input[type=submit]:hover{
 }
 
 
+/** Mapa CSS **/
+
+section.mapa{
+    display: block;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+section.mapa h1{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+section.mapa p{
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+section.mapa iframe{
+    margin: 20px 0;
+    width: 90%;
+    height: 300px;
+    border: none;
+}
+
+
+
 /** Login CSS **/
 
 section.login{
@@ -420,7 +449,7 @@ footer p{
         background-color: #DEB887;
     }
     header{
-        padding: 40px 0 15px;
+        padding: 20px 0 0;
         background: white;
     }
     nav.desktop{

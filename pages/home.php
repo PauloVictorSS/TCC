@@ -53,7 +53,7 @@
 					<input type="submit" value='Enviar' class="right">
 				</form>
 				<div class="clear"></div>
-				<a href="paginas/mapa.php">Como chegar?</a>
+				<a href="<?php echo INCLUDE_PATH; ?>mapa">Como chegar?</a>
 			</div>
 		</div>
 	
