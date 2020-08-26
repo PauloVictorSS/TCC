@@ -204,8 +204,9 @@ section.home div#contato{
 section.home div#contato #divForm{
 	background-color: black;
     display: block;
-	margin: 0 auto;
-    width: 40%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
     padding: 30px 30px;
     min-height: 550px;
@@ -213,7 +214,7 @@ section.home div#contato #divForm{
 section.home div#contato #divForm form{
 	display: block;
 	margin: 0 auto;
-    width: 80%;
+    width: 100%;
 }
 
 section.home div#contato #divForm p,a{
@@ -266,6 +267,69 @@ section.home div#contato #divForm input[type=submit]{
     margin-top: 20px;
 	font-family: 'Raleway', sans-serif;
 }
+
+
+/** Login CSS **/
+
+section.login{
+    display: block;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    background-color: black;
+}
+
+section.login h1{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+section.login form{
+    display: block;
+    margin: 30px auto;
+    width: 90%;
+}
+
+section.login form .input-box{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section.login .input-box label{
+    display: inline-block;
+    min-width: 70px;
+}
+
+section.login .input-box input{
+    padding: 6px;
+    width: calc(100% - 74px);
+    border: none;
+}
+
+section.login form input[type=submit]{
+    display: block;
+    margin: 40px auto 0;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+section.login a{
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+section.login a:hover{
+    text-decoration: underline;
+}
+
 
 
 /** Rodapé CSS **/

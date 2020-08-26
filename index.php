@@ -90,6 +90,7 @@
             }
                 
         ?>
+        
 		<footer>
             <p class="tituloRod">Todos os direitos reservados</p><br>
             <p class="tituloRod">Instituto Federal <br>Câmpus Hortolândia</p>
