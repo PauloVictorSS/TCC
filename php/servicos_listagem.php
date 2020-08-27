@@ -2,7 +2,7 @@
 
     $pagina = 1;
 		
-	$total_reg = 6;
+	$total_reg = 7;
 
 	if(!empty($_GET['pagina']))
 		$pagina = $_GET['pagina'];
@@ -28,13 +28,14 @@
 
     $anterior = $pc - 1;
 	$proximo = $pc + 1;
-						
-	echo "<br><br>";
-						
-	if ($pc > 1)
-		echo "<a href='?pagina=$anterior' id='paginacao-anterior'><i class='fa fa-arrow-left' aria-hidden='true'></i>Anterior</a>";
-						
-	if ($pc < $tp)
-	    echo "<a href='?pagina=$proximo' id='paginacao-proxima'>Próxima <i class='fa fa-arrow-right' aria-hidden='true'></i></a>";
+				
+	echo "<div class='button-box'>";
 
+	if ($pc > 1)
+		echo "<a href='?pagina=$anterior' class='left'><i class='fa fa-arrow-left' aria-hidden='true'></i>Anterior</a><div class='clear'></div>";
+	
+	if ($pc < $tp)
+		echo "<a href='?pagina=$proximo' class='right'>Próxima <i class='fa fa-arrow-right' aria-hidden='true'></i></a><div class='clear'></div>";
+
+		
 ?>

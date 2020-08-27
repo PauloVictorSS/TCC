@@ -1,9 +1,18 @@
+<section class='servicos'>
 
-		<div id='agende'>
+	<h1>Lista de serviços</h1>
+	<div id='tab_agende'>
+    	<table>
+			<tr>
+				<th>Nome</th>
+				<th>Tempo estimado</th>
+				<th>Preço estimado</th>
+				<th></th>
+			</tr>
+		<?php 	include "php/servicos_listagem.php";	?>
 
-			<?php 	include "php/servicos_listagem.php";	?>
+	<div class="clear"></div>
+	<a href='?pagina=1' id='paginacao-inicio'>INÍCIO</a>
+	</div>
 
-			<br><br>
-			<a href='?pagina=1' id='paginacao-inicio'>INÍCIO</a><br><br>
-
-		</div><br>
+</section>

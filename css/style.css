@@ -271,6 +271,55 @@ section.home div#contato #divForm input[type=submit]:hover{
 }
 
 
+/** Serviços Prestados CSS **/
+
+section.servicos{
+    display: block;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+section.servicos h1{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+section.servicos table{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 700px;
+}
+
+
+section.servicos table td{
+    padding: 7px 0;
+}
+
+section.servicos table form button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+section.servicos table form button i{
+    color: white;
+}
+
+section.servicos div.button-box{
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    margin: 10px auto;
+    text-align: center;
+}
+
 /** Mapa CSS **/
 
 section.mapa{
