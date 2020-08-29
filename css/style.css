@@ -155,6 +155,8 @@ section.home div.corpo div.galeria div.bullets{
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
+    display: flex;
+    align-items: center;
 }
 
 section.home div.corpo div.galeria div.bullets span{
@@ -510,38 +512,44 @@ footer p{
     nav.mobile{
         display: block;
     }
+    nav.mobile .botao-menu-mobile{
+        position: relative;
+        z-index: 3;
+    }
     nav.mobile ul{
-        top: 122px;
         z-index: 2;
         list-style-type: none;
         position: absolute;
         left: 0;
+        top: 0;
         display: none;
         text-align: center;
         width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        height: 100%;
     }
     nav.mobile li{
         width: 100%;
-        border-bottom: 1px solid #ccc;
-        padding: 8px 0;
-        font-size: 17px;
-        background: white;
+        padding: 20px 0;
+        font-size: 17px; 
     }
-    nav.mobile li:hover{
-        background: #f7f7f7;
+    nav.mobile li{
+        width: 100%;
+        padding: 20px 0;
+        font-size: 17px;
+    }
+    nav.mobile li:first-child{
+        margin-top: 75px;
     }
     nav.mobile li a {
         display: block;
         text-decoration: none;
-        color: #444;
+        color: rgba(255, 255, 255, 0.87);
     }
     .botao-menu-mobile{
         cursor: pointer;
         color: black;
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        text-align: center;
+        font-size: 50px;
     }
     .botao-menu-mobile i{
         font-size: 50px;

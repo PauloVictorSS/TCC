@@ -11,6 +11,9 @@ $(function(){
             //Trocando o ícone de 'abrir' para 'fechar'
             icone.removeClass('fa-bars'); 
             icone.addClass('fa-times');
+
+            $('.botao-menu-mobile').css({'color': 'white'}); 
+             
         }
         else{
             listaMenu.slideToggle(); //Fazendo o menu desaparecer
@@ -18,6 +21,8 @@ $(function(){
             //Trocando o ícone de 'fechar' para 'abrir'
             icone.removeClass('fa-times');
             icone.addClass('fa-bars');
+
+            $('.botao-menu-mobile').css({'color': 'black'});   
         }
 
     });
