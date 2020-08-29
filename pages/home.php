@@ -9,11 +9,11 @@
 			
 		<div class="corpo" id="galeria">
 			<div class="galeria">
+
 				<section class="banner-principal">
-					<div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/Chrysanthemum.jpg);" class="banner-single" ></div>
-					<div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/Hydrangeas.jpg);" class="banner-single"></div>
-					<div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/Jellyfish.jpg);" class="banner-single"></div>
-					<div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/Koala.jpg);" class="banner-single"></div>
+
+					<?php include "php/galeria_imagens.php";  ?>
+
 					<div class="overlay"></div>
 					<div class="bullets">
 					

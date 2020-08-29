@@ -1,8 +1,6 @@
 <?php     
-
     include "config.php";
     include "conexao/conexao_mysql.php";     
-
 ?>
 
 <!DOCTYPE html>
