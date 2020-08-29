@@ -4,10 +4,10 @@
 	<div id='tab_agende'>
     	<table>
 			<tr>
-				<th>Nome</th>
-				<th>Tempo estimado</th>
-				<th>Preço estimado</th>
-				<th></th>
+				<th class="title">Nome</th>
+				<th class="title">Tempo estimado</th>
+				<th class="title">Preço estimado</th>
+				<th id="lastTitle"></th>
 			</tr>
 		<?php 	include "php/servicos_listagem.php";	?>
 
