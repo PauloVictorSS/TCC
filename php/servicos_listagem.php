@@ -28,7 +28,11 @@
 
     $anterior = $pc - 1;
 	$proximo = $pc + 1;
-				
+
+	$link = INCLUDE_PATH."agendar_servico";
+
+	echo "<a href='$link' id='agendarServico'>Agendar um serviço</a>";
+
 	echo "<div class='button-box'>";
 
 	if ($pc > 1)
