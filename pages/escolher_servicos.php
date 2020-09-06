@@ -1,9 +1,9 @@
-<div id="divAgendar">
-	<h1>_</h1>
-	<h1>Escolha os serviços para agendar</h1><br><br>
+<section class="escolherServicos">
+	<h2>Escolha os serviços para agendar</h2>
 	<form action="<?php echo INCLUDE_PATH; ?>agendar_servico" method="POST" id="formAgendar">
 		
-		<button type="button" id="addServico">+Adicioanr outro serviço</button>
+		<button type="button" id="addServico" class="right">+ Adicionar outro serviço</button>
+		<div class="clear"></div>
 
 		<div class="selectServicos">
 			<select name="servicos[]" id="servicos" required>
@@ -12,9 +12,7 @@
 			</select>
 		</div>
 
-		<button type="submit" value="acao">Prosseguir<i class='fa fa-arrow-right' aria-hidden='true'></i></button>
+		<button type="submit" value="acao" class="right">Prosseguir  <i class='fa fa-arrow-right' aria-hidden='true'></i></button>
+		<div class="clear"></div>
 	</form>
-	<br><br>
-	<a href='lista_servicos.php'>Escolher outro serviço</a>
-	<br><br>
-</div>
+</section>
