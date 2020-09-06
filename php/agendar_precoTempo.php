@@ -1,6 +1,9 @@
 <?php
 
         $servicos = $_POST['servicos'];
+
+        $_SESSION["servicosEscolhidos"] = $servicos;
+
         $tempoTotal = 0;
         $precoTotal = 0;
 
@@ -26,7 +29,7 @@
         $min = $tempoTotal % 60;
 
         if($horas != 0 and $min != 0)
-            $tempoTotal = $horas." horas".$min." minutos";
+            $tempoTotal = $horas." horas ".$min." minutos";
 
         elseif($horas == 0 and $min != 0)
             $tempoTotal = $min." minutos";   
@@ -34,6 +37,6 @@
         else
             $tempoTotal = $horas." horas";
 
-        echo "<p><b>Duração total estimado:</b> ".$tempoTotal."</p>";
+        echo "<br><p><b>Duração total estimada:</b> ".$tempoTotal."</p>";
         echo "<p><b>Preço total estimado:</b> ".$precoTotal." reais</p>";
 ?>

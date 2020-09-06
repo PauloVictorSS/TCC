@@ -338,6 +338,82 @@ section.servicos div.button-box{
 }
 
 
+/** Escolher Servicos CSS **/
+
+section.escolherServicos{
+    display: block;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    background-color: black;
+}
+
+section.escolherServicos h2{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 45px;
+    padding: 10px 0 15px;
+}
+
+section.escolherServicos form{
+    display: block;
+    margin: 30px auto 0;
+    width: 95%;
+}
+
+section.escolherServicos form select,
+section.escolherServicos form input[type=date]{
+    padding: 6px;
+    width: 100%;
+    border: none;
+}
+
+section.escolherServicos form input[type=date]{
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+section.escolherServicos form select+select{
+    margin-top: 10px;
+}
+
+section.escolherServicos form button{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding-bottom: 15px;
+}
+
+section.escolherServicos form button[type=submit]{
+    font-size: 15px;
+    margin-top: 75px;
+}
+
+section.escolherServicos div.text{
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+section.escolherServicos label[for=dia]{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+section.escolherServicos a.voltar{
+    display: block;
+    max-width: 100px;
+    margin-top: 75px;
+}
+
 /** Mapa CSS **/
 
 section.mapa{
@@ -431,55 +507,6 @@ section.login a{
 
 section.login a:hover{
     text-decoration: underline;
-}
-
-
-/** Escolher Servicos CSS **/
-
-section.escolherServicos{
-    display: block;
-    margin: 50px auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    color: white;
-    background-color: black;
-}
-
-section.escolherServicos h2{
-    text-align: center;
-    font-family: 'Yellowtail', cursive;
-    font-weight: normal;
-    font-size: 45px;
-    padding-bottom: 15px;
-}
-
-section.escolherServicos form{
-    display: block;
-    margin: 30px auto 0;
-    width: 95%;
-}
-
-section.escolherServicos form select{
-    padding: 6px;
-    width: 100%;
-    border: none;
-}
-section.escolherServicos form select+select{
-    margin-top: 10px;
-}
-section.escolherServicos form button{
-    border: none;
-    background: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding-bottom: 15px;
-}
-
-section.escolherServicos form button[type=submit]{
-    font-size: 15px;
-    margin: 75px 0 0;
 }
 
 
