@@ -60,7 +60,10 @@ CREATE TABLE `cliente` (
 CREATE TABLE `fotos` (
   `id` int(11) NOT NULL,
   `descricao` varchar(100) DEFAULT NULL,
-  `imagem` longblob DEFAULT NULL
+  `imagem` longblob DEFAULT NULL,
+  `situacao` int(11) DEFAULT NULL,
+  `id_funcionario` varchar(20) DEFAULT NULL,
+  `id_cliente` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -158,7 +161,9 @@ ALTER TABLE `cliente`
 -- Índices para tabela `fotos`
 --
 ALTER TABLE `fotos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_funcionario` (`id_funcionario`),
+  ADD KEY `id_cliente` (`id_cliente`);
 
 --
 -- Índices para tabela `funcionario`
@@ -204,6 +209,10 @@ ALTER TABLE `servicos_prestados`
 ALTER TABLE `agendamento`
   ADD CONSTRAINT `agendamento_ibfk_1` FOREIGN KEY (`id_servico_prestado`) REFERENCES `servicos_prestados` (`id`),
   ADD CONSTRAINT `agendamento_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`);
+  
+  ALTER TABLE `fotos`
+  ADD CONSTRAINT `fotos_ibfk_1` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionario` (`id`),
+  ADD CONSTRAINT `fotos_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
