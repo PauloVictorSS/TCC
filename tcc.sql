@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Set-2020 às 20:32
+-- Tempo de geração: 06-Set-2020 às 22:46
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.7
 
@@ -111,7 +111,7 @@ CREATE TABLE `servicos_prestados` (
 --
 
 INSERT INTO `servicos_prestados` (`id`, `nome`, `tempo`, `preco`) VALUES
-(1, 'Alongamento de unhas fibra de vidro', 240, 180),
+(1, 'Alongamento de unhas', 240, 180),
 (2, 'Banho de brilho', 120, 60),
 (3, 'Banho de gel nas unhas', 180, 80),
 (4, 'Botox', 120, 80),
