@@ -29,7 +29,7 @@
     $anterior = $pc - 1;
 	$proximo = $pc + 1;
 
-	$link = INCLUDE_PATH."agendar_servico";
+	$link = INCLUDE_PATH."escolher_servicos";
 
 	echo "<a href='$link' id='agendarServico'>Agendar um serviço</a>";
 

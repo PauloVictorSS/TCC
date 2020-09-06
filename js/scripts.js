@@ -19,3 +19,13 @@ $(function(){
 
 
 })
+
+document.querySelector("#addServico").addEventListener("click", cloneField)
+
+function cloneField(){
+
+    const field = document.querySelector(".selectServicos #servicos").cloneNode(true)
+
+    document.querySelector(".selectServicos").appendChild(field)
+
+}
