@@ -1,6 +1,6 @@
 <section class="escolherServicos">
 	<h2>Escolha os serviços para agendar</h2>
-	<form action="<?php echo INCLUDE_PATH; ?>agendar_servico" method="POST" id="formAgendar">
+	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST" id="formAgendar">
 		
 		<button type="button" id="addServico" class="right">+ Adicionar outro serviço</button>
 		<div class="clear"></div>
@@ -8,7 +8,7 @@
 		<div class="selectServicos">
 			<select name="servicos[]" id="servicos" required>
 				<option value="">Selecione um serviço</option>
-				<?php 	include("php/agendar_recuperaServico.php");	 ?>
+				<?php 	include("php/agendar_selectServicos.php");	 ?>
 			</select>
 		</div>
 

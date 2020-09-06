@@ -8,7 +8,7 @@
             $id = $servico['id'];
             $preco = $servico['preco'];
 
-            echo "<option value=".$id.";".$preco.">$nome</option>";
+            echo "<option value=".$id.">$nome</option>";
 
         }
 ?>
