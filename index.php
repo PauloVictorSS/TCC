@@ -1,6 +1,6 @@
 <?php     
     include "config.php";
-    include "conexao/conexao_mysql.php";     
+    include "database/conexao_mysql.php";     
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +20,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
+        <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
 	</head>
 	
 	<body>

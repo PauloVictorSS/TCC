@@ -9,11 +9,4 @@
     }
 
 
-
-
-
-//<div style="background-image: url(imagens/Chrysanthemum.jpg);" class="banner-single" ></div>
-
-
-
 ?>

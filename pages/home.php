@@ -23,7 +23,7 @@
 			<div class="clear"></div>
 			<div id="sobre">
 				<div class="w50 left">
-					<img src="imagens/fotoQuemSomos.jpg" id="imgQuemSomos">
+					<img src="images/fotoQuemSomos.jpg" id="imgQuemSomos">
 				</div>
 				<div class="w50 right">
 					<h1>SOBRE NÓS</h1>
