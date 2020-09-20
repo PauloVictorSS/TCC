@@ -77,3 +77,10 @@ div.red{
     background: #eb3c3c;
 }
 
+
+@media (max-width: 1100px){
+    body{
+        background: none;
+        background-image: url('../images/fundotelpequena.PNG');
+    }
+}

@@ -13,6 +13,10 @@ header .logo{
     font-size: 190%;
 }
 
+header div.titulo_imagem{
+    display: none;
+}
+
 .mobile{
     display: none; /* Fazendo o menu do mobile sumir */
 }
@@ -574,12 +578,9 @@ section.erro404 p a:hover{
 /** Medias para telas menores **/
 
 @media (max-width: 1100px){
-    body{
-        background: none;
-        background-image: url('../images/fundotelpequena.PNG');
-    }
     header{
-        padding: 20px 0 0;
+        padding-top: 3px;
+        padding-bottom: 0;
         background: white;
     }
     nav.desktop{
@@ -667,6 +668,25 @@ section.erro404 p a:hover{
 
 
 @media (max-width: 600px){
+    
+    header{
+        padding: 0;
+        padding-top: 5px;
+    }
+    header div.titulo_texto{
+        display: none;
+    }
+    header div.titulo_imagem{
+        display: inline-block;
+    }
+    header div.titulo_imagem img{
+        width: 65px;
+    }
+
+    nav.mobile .botao-menu-mobile{
+        top: 7px;
+    }
+
     section.home div.corpo{
         width: 100%;
         background-color: white;

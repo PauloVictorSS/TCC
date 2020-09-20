@@ -27,7 +27,8 @@
 	<body>
         <header>
         <div class="center">
-            <div class="left"><a href="<?php echo INCLUDE_PATH; ?>"><h1 class="logo">Mãe e Filhas</h1></a></div>
+            <div class="left titulo_texto"><a href="<?php echo INCLUDE_PATH; ?>"><h1 class="logo">Mãe e Filhas</h1></a></div>
+            <div class="left titulo_imagem"><a href="<?php echo INCLUDE_PATH; ?>"><img src="images/favicon.ico" alt="Mãe e Filhas"></a></div>
             <nav class="desktop right">
                 <ul>
                 <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
