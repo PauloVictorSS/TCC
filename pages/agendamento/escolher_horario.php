@@ -31,6 +31,12 @@
      //Incluindo o código para verificar e resolver os conflitos de horários
      include("php/agendamento/conflitoHorario.php");
 
+    if(count($array_horarios_disponiveis) == 0){
+        $_SESSION["aviso"] = 1;
+        
+        header("Location: ".INCLUDE_PATH."escolher_dia");
+    }
+
 ?>
 
 <section class="agendamento">
@@ -69,7 +75,6 @@
                 
             ?>
         </select>
-        <?php echo count($array_horarios_disponiveis); ?>
         <button type="submit" value="acao" class="right" name="action">Prosseguir  <i class='fa fa-arrow-right' aria-hidden='true'></i></button>
         <a href="<?php echo INCLUDE_PATH; ?>escolher_dia" class="voltar left"><i class='fa fa-arrow-left' aria-hidden='true'></i> Voltar</a>
         <div class="clear"></div>

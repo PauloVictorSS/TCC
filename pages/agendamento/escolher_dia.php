@@ -6,7 +6,7 @@
 		$data_escolhida = new DateTime($_POST["dia"]);
 		
 		if($data_escolhida->format('w') <= 1)
-			echo "Neste dia não estaremos funcionando :(";
+			echo "<div class='mensagem red'>Neste dia não estaremos funcionando</div>";
 		elseif($atual->format('d/m/Y') <= $data_escolhida->format('d/m/Y')){
 
 			$_SESSION["data_escolhida"] = $data_escolhida;
@@ -14,7 +14,7 @@
 			header("Location: ".INCLUDE_PATH."escolher_horario");
 		}
 		else
-			echo "Data não disponível, tente escolher um dia após o dia de hoje";
+			echo "<div class='mensagem red'>Data não disponível, tente escolher um dia após o dia de hoje</div>";
 
     }else{
 
@@ -24,10 +24,18 @@
 			);
 
 		if(isset($_SESSION["horario_escolhido"]))
-		unset(
-			$_SESSION["horario_escolhido"],
-			$_SESSION["hora_Prevista_Saida"]
-		);
+			unset(
+				$_SESSION["horario_escolhido"],
+				$_SESSION["hora_Prevista_Saida"]
+			);
+
+		if(isset($_SESSION["aviso"])){
+			echo "<div class='mensagem red'>Com base na duração total estimada dos serviços escolhidos, não há horários disponíveis para esta data</div>";
+
+			unset(
+				$_SESSION["aviso"]
+			);
+		}
 
 	}
 
