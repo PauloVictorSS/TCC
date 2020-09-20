@@ -59,7 +59,7 @@ img{
 /** Menu CSS **/
 
 header{
-    padding: 20px 0;
+    padding: 10px 0;
     background: white;
 }
 
@@ -207,6 +207,7 @@ section.home div#contato #divForm{
     padding: 30px 30px;
     min-height: 550px;
 }
+
 section.home div#contato #divForm form{
 	display: block;
 	margin: 0 auto;
@@ -380,7 +381,7 @@ section.agendamento form input[type=date]{
 section.agendamento form input[type=date]{
     display: block;
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 300px;
 }
 
 section.agendamento form select{
@@ -411,6 +412,20 @@ section.agendamento a.voltar{
     display: block;
     max-width: 100px;
     margin-top: 55px;
+}
+
+section.agendamento form button[type=submit]#btn-confirmar{
+    display: block;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 7px;
+    margin: 10px auto 0;
+}
+
+section.agendamento form button[type=submit]#btn-confirmar:hover{
+    background: #eee;
+    font-weight: 550;
 }
 
 
@@ -576,7 +591,7 @@ section.cadastro a:hover{
 
 footer{
     background: white;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 footer p{
@@ -586,7 +601,37 @@ footer p{
 }
 
 
-@media (max-width: 1024px){
+/** Erro 404 **/
+
+body#erro404{
+    background: white;
+}
+
+section.erro404 {
+    text-align: center;
+}
+
+section.erro404 h1{
+    border-top: 2px solid #ce3232;
+    margin-top: 50px;
+    font-size: 40px;
+    color: #ce3232;
+}
+
+section.erro404 p, 
+section.erro404 a{
+    margin-top: 30px;
+    color: black;
+}
+
+section.erro404 p a:hover{
+    text-decoration: underline;
+}
+
+
+/** Medias para telas menores **/
+
+@media (max-width: 1100px){
     body{
         background: none;
         background-image: url('../images/fundotelpequena.PNG');
@@ -685,6 +730,12 @@ footer p{
         background-color: white;
         padding: 0;
     }
+    section.home div.corpo div#sobre p{
+        margin:0;
+    }
+    section.home div#contato #divForm{
+        padding: 10px;
+    }
     section.home div.corpo div.galeria .banner-principal{
         width: 100%;
         height: 300px;
@@ -696,5 +747,10 @@ footer p{
         height: 100%;
         margin-left: 0;
     }
+
+    section.servicos{
+        padding: 5px;
+    }
+    
 
 }

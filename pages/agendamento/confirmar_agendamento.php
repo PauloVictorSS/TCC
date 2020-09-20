@@ -17,7 +17,9 @@
     </div>
     <form action="<?php echo INCLUDE_PATH; ?>escolher_horario" method="POST">
 
-        <button type="submit" value="acao" class="right" name="action">Confirmar e Agendar</button>
+        <button type="submit" value="acao" name="action" id="btn-confirmar">Confirmar e Agendar</button>
+        <div class="clear"></div>
+        
         <a href="<?php echo INCLUDE_PATH; ?>escolher_horario" class="voltar left"><i class='fa fa-arrow-left' aria-hidden='true'></i> Voltar</a>
         <div class="clear"></div>
 
