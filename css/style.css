@@ -338,9 +338,9 @@ section.servicos div.button-box{
 }
 
 
-/** Escolher Servicos CSS **/
+/** Agendamento CSS **/
 
-section.escolherServicos{
+section.agendamento{
     display: block;
     margin: 50px auto;
     padding: 20px;
@@ -350,7 +350,7 @@ section.escolherServicos{
     background-color: black;
 }
 
-section.escolherServicos h2{
+section.agendamento h2{
     text-align: center;
     font-family: 'Yellowtail', cursive;
     font-weight: normal;
@@ -358,30 +358,36 @@ section.escolherServicos h2{
     padding: 10px 0 15px;
 }
 
-section.escolherServicos form{
+section.agendamento form{
     display: block;
     margin: 30px auto 0;
-    width: 95%;
+    width: 100%;
 }
 
-section.escolherServicos form select,
-section.escolherServicos form input[type=date]{
+section.agendamento form label{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+section.agendamento form select,
+section.agendamento form input[type=date]{
     padding: 6px;
     width: 100%;
     border: none;
 }
 
-section.escolherServicos form input[type=date]{
+section.agendamento form input[type=date]{
     display: block;
     margin: 0 auto;
     max-width: 200px;
 }
 
-section.escolherServicos form select{
+section.agendamento form select{
     margin-top: 10px;
 }
 
-section.escolherServicos form button{
+section.agendamento form button{
     border: none;
     background: none;
     color: white;
@@ -390,29 +396,23 @@ section.escolherServicos form button{
     padding-bottom: 15px;
 }
 
-section.escolherServicos form button[type=submit]{
+section.agendamento form button[type=submit]{
     font-size: 15px;
     margin-top: 55px;
 }
 
-section.escolherServicos div.text{
+section.agendamento div.text{
     margin: 20px 0;
     width: 100%;
     text-align: center;
 }
 
-section.escolherServicos label[for=dia]{
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    padding-bottom: 5px;
-}
-
-section.escolherServicos a.voltar{
+section.agendamento a.voltar{
     display: block;
     max-width: 100px;
     margin-top: 55px;
 }
+
 
 /** Mapa CSS **/
 

@@ -7,7 +7,7 @@
         else
             $servicos = $_SESSION["servicosEscolhidos"]; 
 
-        $tempoTotal = 0;
+        $_SESSION["duracaoServicosEscolhidos"] = 0;
         $precoTotal = 0;
 
         echo "<p><b>Serviços escolhidos:</b></p>";
@@ -22,7 +22,7 @@
 
             while ($infs = mysqli_fetch_array($result)) {
                 
-                $tempoTotal += $infs['tempo'];
+                $_SESSION["duracaoServicosEscolhidos"] += $infs['tempo'];
                 $precoTotal += $infs['preco'];
 
                 echo "<p>".$infs['nome']."</p>";
@@ -30,20 +30,20 @@
 
         }
 
-        $duracaoMinutos = $tempoTotal;
+        $duracaoMinutos = $_SESSION["duracaoServicosEscolhidos"];
 
-        $horas = intdiv($tempoTotal, 60);
-        $min = $tempoTotal % 60;
+        $horas = intdiv($duracaoMinutos, 60);
+        $min = $duracaoMinutos % 60;
 
         if($horas != 0 and $min != 0)
-            $tempoTotal = $horas." horas ".$min." minutos";
+            $duracaoMinutos = $horas." horas ".$min." minutos";
 
         elseif($horas == 0 and $min != 0)
-            $tempoTotal = $min." minutos";   
+            $duracaoMinutos = $min." minutos";   
 
         else
-            $tempoTotal = $horas." horas";
+            $duracaoMinutos = $horas." horas";
 
-        echo "<br><p><b>Duração total estimada:</b> ".$tempoTotal."</p>";
+        echo "<br><p><b>Duração total estimada:</b> ".$duracaoMinutos."</p>";
         echo "<p><b>Preço total estimado:</b> ".$precoTotal." reais</p>";
 ?>

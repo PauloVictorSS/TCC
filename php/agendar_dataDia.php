@@ -14,6 +14,4 @@
     $hora_inicio = $dia_semana["hora_inicio"];
     $hora_termino = $dia_semana["hora_termino"];
 
-    echo "<p><b>Horário de funcionamento nesse dia:</b> $hora_inicio - $hora_termino</p>";
-
 ?>

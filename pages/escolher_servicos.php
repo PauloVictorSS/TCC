@@ -1,4 +1,4 @@
-<section class="escolherServicos">
+<section class="agendamento">
 	<h2>Escolha os serviços para agendar</h2>
 	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST" id="formAgendar">
 		
