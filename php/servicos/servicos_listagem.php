@@ -24,7 +24,7 @@
 	$tr = $num_rows; // verifica o número total de registros
     $tp = $tr / $total_reg; // verifica o número total de páginas
     
-    include "php/servicos_bdd.php";
+    include "php/servicos/select_bdd.php";
 
     $anterior = $pc - 1;
 	$proximo = $pc + 1;

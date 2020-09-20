@@ -19,9 +19,9 @@
 
         <?php 
             //Mostrando as informações dos serviços escolhidos junto com o preço e o tempo estimado
-            include("php/agendar_precoTempo.php");
+            include("php/agendamento/mostraPrecoTempo.php");
             //Mostrando as informações do dia escolhiodo
-            include("php/agendar_dataDia.php"); 
+            include("php/agendamento/mostraDataDia.php"); 
         ?>
 
     </div>
@@ -61,7 +61,7 @@
                 $intervalo = new DateInterval('PT15M'); 
 
                 //Incluindo o código para verificar e resolver os conflitos de horários
-                include("php/agendar_conflitoHorario.php");
+                include("php/agendamento/conflitoHorario.php");
 
             ?>
         </select>

@@ -22,7 +22,7 @@
 <section class="agendamento">
     <h2>Escolha o dia para o servico</h2>
     <div class="text">
-		<?php include("php/agendar_precoTempo.php"); ?>
+		<?php include("php/agendamento/mostraPrecoTempo.php"); ?>
     </div>
 	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST">
 

@@ -8,7 +8,7 @@
 		<div class="selectServicos">
 			<select name="servicos[]" id="servicos" required>
 				<option value="">Selecione um serviço</option>
-				<?php 	include("php/agendar_selectServicos.php");	 ?>
+				<?php 	include("php/agendamento/mostraServicos.php");	 ?>
 			</select>
 		</div>
 
@@ -16,3 +16,15 @@
 		<div class="clear"></div>
 	</form>
 </section>
+
+<script>
+	document.querySelector("#addServico").addEventListener("click", cloneField)
+
+	function cloneField(){
+
+		const field = document.querySelector(".selectServicos #servicos").cloneNode(true)
+
+		document.querySelector(".selectServicos").appendChild(field)
+
+	}
+</script>

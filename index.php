@@ -78,9 +78,12 @@
 
             } 
 
-            //Verificando se a url escolhida existe
+            //Verificando se a url escolhida existe, caso exista
+            //inclui a página da url nesse arquivo
             if(file_exists('pages/'.$url.'.php'))
-                include('pages/'.$url.'.php'); //incluindo a página da url
+                include('pages/'.$url.'.php'); 
+            elseif(file_exists('pages/agendamento/'.$url.'.php'))
+                include('pages/agendamento/'.$url.'.php');
             else{
                 if($url != 'galeria' && $url != 'sobre' && $url != 'contato')
                     header("Location: pages/404.php");

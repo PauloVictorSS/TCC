@@ -5,9 +5,9 @@
         <?php 
 
             //Mostrando as informações dos serviços escolhidos junto com o preço e o tempo estimado
-            include("php/agendar_precoTempo.php");
+            include("php/agendamento/mostraPrecoTempo.php");
             //Mostrando as informações do dia escolhiodo
-            include("php/agendar_dataDia.php"); 
+            include("php/agendamento/mostraDataDia.php"); 
 
             echo "<br><p><b>Horário escolhido:</b> ".$_SESSION["horario_escolhido"]."</p>";
             echo "<p><b>Horário prévio de saída:</b> ".$_SESSION["hora_Prevista_Saida"]."</p>";
