@@ -1,7 +1,45 @@
 <?php
+    
+    if(!isset($_SESSION)) 
+        session_start(); 
 
-    //Definindo a url padrão do site, tanto para um acesso mais limpo
-    //quanto para um acesso mais dinâmico
+    date_default_timezone_set('America/Sao_Paulo');
+
+    define("HOST", "localhost");
+    define("USER", "root");
+    define("PASS", "");
+    define("DB", "tcc");
+
     define("INCLUDE_PATH", "http://localhost/GitHub/Escola/TCC/");
+
+    function minuteToInterval($duracaoMinutos){
+        $horas = 00;
+        $min = 00;
+        $horas = intdiv($duracaoMinutos, 60);
+        $min = $duracaoMinutos % 60;
+        $duracaoTotal = $horas.":".$min;
+        $duracaoTotal = new DateTime($duracaoTotal);
+        $duracao_hora = $duracaoTotal->format('H');
+        $duracao_minuto = $duracaoTotal->format('i');
+        $txt = 'PT'.strval($duracao_hora).'H'.strval($duracao_minuto).'M';
+
+        return new DateInterval($txt);
+    }
+
+    function diaSemanaPortugues($diaSemanaIngles){
+
+        if($diaSemanaIngles == 'Tuesday')
+            return 'Terça-Feira';
+        elseif($diaSemanaIngles == 'Wednesday')
+            return 'Quarta-feira';
+        elseif($diaSemanaIngles == 'Thursday')
+            return 'Quinta-feira';
+        elseif($diaSemanaIngles == 'Friday')
+            return 'Sexta-feira';
+        elseif($diaSemanaIngles == 'Saturday')
+            return 'Sábado-feira';
+
+    }
+
 
 ?>

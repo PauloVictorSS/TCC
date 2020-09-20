@@ -1,15 +1,20 @@
 <?php
 
-        $servicos = $_POST['servicos'];
-
-        $_SESSION["servicosEscolhidos"] = $servicos;
+        if(isset($_POST['servicos'])){
+            $servicos = $_POST['servicos'];
+            $_SESSION["servicosEscolhidos"] = array();
+        }
+        else
+            $servicos = $_SESSION["servicosEscolhidos"]; 
 
         $tempoTotal = 0;
         $precoTotal = 0;
 
         echo "<p><b>Serviços escolhidos:</b></p>";
 
-        foreach ($servicos as $id) {    
+        foreach ($servicos as $key => $id) {    
+
+            $_SESSION["servicosEscolhidos"][$key] = $id;
 
             $query = "SELECT nome, tempo, preco FROM `servicos_prestados` WHERE id='$id'";
 
@@ -24,6 +29,8 @@
             }
 
         }
+
+        $duracaoMinutos = $tempoTotal;
 
         $horas = intdiv($tempoTotal, 60);
         $min = $tempoTotal % 60;
