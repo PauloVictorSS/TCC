@@ -9,7 +9,27 @@
         $_SESSION["hora_Prevista_Saida"] = $hora_escolhida->add(minuteToInterval($_SESSION["duracaoServicosEscolhidos"]))->format("H:i");
 
         header("Location: ".INCLUDE_PATH."confirmar_agendamento");
+    }else{
+
+        if(isset($_SESSION["horario_escolhido"]))
+			unset(
+				$_SESSION["horario_escolhido"],
+				$_SESSION["hora_Prevista_Saida"]
+			);
     }
+
+     //Setando as informações dos serviços escolhidos junto com o preço e o tempo estimado
+     include("php/agendamento/mostraPrecoTempo.php");
+
+     //Setando as informações do dia escolhido
+     include("php/agendamento/mostraDataDia.php"); 
+
+     //Incluindo o código que vai criar as váriaveis necessárias para a vericação
+     //dos horários disponíveis
+     include("php/agendamento/preparoConflitoHorario.php");
+
+     //Incluindo o código para verificar e resolver os conflitos de horários
+     include("php/agendamento/conflitoHorario.php");
 
 ?>
 
@@ -17,12 +37,20 @@
     <h2>Escolher Horário</h2>
     <div class="text">
 
+        <p><b>Serviços escolhidos:</b></p>
         <?php 
-            //Mostrando as informações dos serviços escolhidos junto com o preço e o tempo estimado
-            include("php/agendamento/mostraPrecoTempo.php");
-            //Mostrando as informações do dia escolhiodo
-            include("php/agendamento/mostraDataDia.php"); 
+
+            foreach ($nomesServicosEscolhidos as $key => $nome) {
+                echo "<p>$nome</p>";
+            }
+
         ?>
+
+        <br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>
+        <p><b>Preço total estimado: </b><?php echo $precoTotal; ?></p>
+        
+        <br><p><b>Data escolhida: </b><?php echo $data_escolhida->format('d/m/Y'); ?></p>
+		<p><b>Dia da semana: </b><?php echo diaSemanaPortugues($data_escolhida->format('l')); ?></p>
 
     </div>
     <form action="<?php echo INCLUDE_PATH; ?>escolher_horario" method="POST">
@@ -33,39 +61,15 @@
             <option value="">Escolha um dos horários</option>
             <?php
 
-                $cont = 0;
-
-                //Fazendo a consulta de todos os agendamentos que tem a mesma data
-                $consulta2 = "SELECT * FROM agendamento WHERE data_agendada = '".$data_escolhida->format("d/m/Y")."' ORDER BY hora_agendada";
-                $result = mysqli_query($conexao, $consulta2);
-
-                $qtd_agendamentos = mysqli_num_rows($result); //Nº total de agendamentos no mesmo dia
-                $agendamentos_feitos = mysqli_fetch_array($result); //Informações da primeira linha desta consulta
-
-                //Pegando um Objeto DateInterval com base nos minutos
-                $interval_duracaoServico = minuteToInterval($duracaoMinutos); 
-
-                //Criando um Objeto DateTime tanto para o horário de abertura
-                //como para o de fechamento do salão
-                $hora_disponivel = new DateTime($hora_inicio);
-                $horario_max = new DateTime($hora_termino);
                 
-                //Criando um Objeto Datetime para um horário que vai serir de comparação
-                $hora_Prevista_saida = new Datetime($hora_inicio); 
-
-                //Adicionando nesse horário a duração dos serviços escolhidos pelo cliente
-                //Com isso, o horário de comparação agora tem o horário previo de saída do cliente
-                $hora_Prevista_saida->add($interval_duracaoServico); 
-
-                //Criando um intervalo de 15 minutos para servir de pausa entre os horários
-                $intervalo = new DateInterval('PT15M'); 
-
-                //Incluindo o código para verificar e resolver os conflitos de horários
-                include("php/agendamento/conflitoHorario.php");
-
+                //Mostrando todos os horários disponíveis
+                foreach ($array_horarios_disponiveis as $key => $value)
+                    echo $value;
+                
+                
             ?>
         </select>
-
+        <?php echo count($array_horarios_disponiveis); ?>
         <button type="submit" value="acao" class="right" name="action">Prosseguir  <i class='fa fa-arrow-right' aria-hidden='true'></i></button>
         <a href="<?php echo INCLUDE_PATH; ?>escolher_dia" class="voltar left"><i class='fa fa-arrow-left' aria-hidden='true'></i> Voltar</a>
         <div class="clear"></div>

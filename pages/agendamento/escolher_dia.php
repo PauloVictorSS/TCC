@@ -16,13 +16,41 @@
 		else
 			echo "Data não disponível, tente escolher um dia após o dia de hoje";
 
-    }
+    }else{
+
+		if(isset($_SESSION["data_escolhida"]))
+			unset(
+				$_SESSION["data_escolhida"]
+			);
+
+		if(isset($_SESSION["horario_escolhido"]))
+		unset(
+			$_SESSION["horario_escolhido"],
+			$_SESSION["hora_Prevista_Saida"]
+		);
+
+	}
+
+	//Setando as informações dos serviços escolhidos junto com o preço e o tempo estimado
+	include("php/agendamento/mostraPrecoTempo.php");
 
 ?>
 <section class="agendamento">
     <h2>Escolha o dia para o servico</h2>
     <div class="text">
-		<?php include("php/agendamento/mostraPrecoTempo.php"); ?>
+
+		<p><b>Serviços escolhidos:</b></p>
+		<?php 
+
+            foreach ($nomesServicosEscolhidos as $key => $nome) {
+                echo "<p>$nome</p>";
+            }
+
+		?>
+
+		<br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>
+		<p><b>Preço total estimado: </b><?php echo $precoTotal; ?></p>
+
     </div>
 	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST">
 

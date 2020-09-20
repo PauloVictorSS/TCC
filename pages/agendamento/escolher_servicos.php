@@ -1,3 +1,25 @@
+<?php
+
+	if(isset($_SESSION["servicosEscolhidos"]))
+		unset(
+			$_SESSION["servicosEscolhidos"],
+			$_SESSION["duracaoServicosEscolhidos"]
+		);
+
+	if(isset($_SESSION["data_escolhida"]))
+		unset(
+			$_SESSION["data_escolhida"]
+		);
+
+	if(isset($_SESSION["horario_escolhido"]))
+		unset(
+			$_SESSION["horario_escolhido"],
+			$_SESSION["hora_Prevista_Saida"]
+		);
+	
+
+?>
+
 <section class="agendamento">
 	<h2>Escolha os serviços para agendar</h2>
 	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST" id="formAgendar">

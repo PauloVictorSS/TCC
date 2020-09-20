@@ -1,7 +1,10 @@
 <?php
 
+    $key = 0;
+    $array_horarios_disponiveis = array();
+
     //Começo da comparação entre o horário previsto de saida e o horário de fechamento do salão
-    while($hora_Prevista_saida->format('H:i') < $horario_max->format('H:i')){
+    while($hora_Prevista_saida->format('H:i') <= $horario_max->format('H:i')){
 
         //Verificando se já foi feito todas as verificações de conflitos de horários
         if($cont < $qtd_agendamentos){
@@ -29,10 +32,6 @@
                 //Com isso, o horário de comparação agora tem o horário previo de saída do cliente
                 $hora_Prevista_saida->add($interval_duracaoServico);
 
-                //Adicionando o intervalo (15 minutos) nos horários para fazer a próxima verificação
-                $hora_disponivel->add($intervalo);
-                $hora_Prevista_saida->add($intervalo);
-
                 //Pulando para o próximo agendamento feito no mesmo dia, para verificar o conflito de horário
                 $cont++;
                 $agendamentos_feitos = mysqli_fetch_array($result);
@@ -42,8 +41,9 @@
             }
         }
 
-        //Imprimindo na tela um horário disponível para agendamento
-        echo "<option value='".$hora_disponivel->format('H:i')."'>".$hora_disponivel->format('H:i')."</option>";
+        //Adicionando o horário disponível no array
+        $array_horarios_disponiveis[$key] = "<option value='".$hora_disponivel->format('H:i')."'>".$hora_disponivel->format('H:i')."</option>";
+        $key++;
 
         //Adicionando o intervalo (15 minutos) nos horários para fazer a próxima verificação
         $hora_disponivel->add($intervalo);
