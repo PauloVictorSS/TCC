@@ -57,7 +57,7 @@
 		?>
 
 		<br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>
-		<p><b>Preço total estimado: </b><?php echo $precoTotal; ?></p>
+		<p><b>Preço total estimado: </b>R$<?php echo $precoTotal; ?>,00</p>
 
     </div>
 	<form action="<?php echo INCLUDE_PATH; ?>escolher_dia" method="POST">

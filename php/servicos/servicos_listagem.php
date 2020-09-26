@@ -31,7 +31,10 @@
 
 	$link = INCLUDE_PATH."escolher_servicos";
 
-	echo "<a href='$link' id='agendarServico'>Agendar um serviço</a>";
+	if(isset($_SESSION["id_user"]))
+		echo "<a href='$link' id='agendarServico'>Agendar um serviço</a>";
+	else
+		echo "<p style='text-align: center;'>Faça o login para agendar um serviço</p>";
 
 	echo "<div class='button-box'>";
 

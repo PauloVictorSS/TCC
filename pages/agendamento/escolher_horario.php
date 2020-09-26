@@ -53,7 +53,7 @@
         ?>
 
         <br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>
-        <p><b>Preço total estimado: </b><?php echo $precoTotal; ?></p>
+        <p><b>Preço total estimado: </b>R$<?php echo $precoTotal; ?>,00</p>
         
         <br><p><b>Data escolhida: </b><?php echo $data_escolhida->format('d/m/Y'); ?></p>
 		<p><b>Dia da semana: </b><?php echo diaSemanaPortugues($data_escolhida->format('l')); ?></p>

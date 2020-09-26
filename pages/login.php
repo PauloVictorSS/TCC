@@ -9,7 +9,7 @@
         $resultado = mysqli_query($conexao, $verifica);
 
         if(mysqli_num_rows($resultado) == 1){
-			$url = INCLUDE_PATH."pagina_cliente.php";
+			$url = INCLUDE_PATH."pages/area_do_usuario.php";
 
 			$inf_usuario = mysqli_fetch_array($resultado);
 
@@ -17,13 +17,14 @@
 
 			echo "<div class='mensagem green'>Logado com sucesso! <br>ID do Usuário -> ".$_SESSION["id_user"]."</div>";
 			
-			//header("Location: $url");
+			header("Location: $url");
         }
         else{
             echo "<div class='mensagem red'>E-mail ou senha incorretos!</div>";
         }
     }
 ?>
+
 
 <section class="login">
 	<h1>Login</h1>
@@ -40,3 +41,4 @@
 	</form>
 	<a href="<?php echo INCLUDE_PATH; ?>cadastro" id="aLogin">Não possui um cadastro?</a>
 </section>
+

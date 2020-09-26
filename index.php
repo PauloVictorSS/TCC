@@ -20,7 +20,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
         <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
 	</head>
 	
@@ -31,12 +31,21 @@
             <div class="left titulo_imagem"><a href="<?php echo INCLUDE_PATH; ?>"><img src="images/favicon.ico" alt="Mãe e Filhas"></a></div>
             <nav class="desktop right">
                 <ul>
-                <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>login">ENTRAR</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
+
+                    <?php if(!isset($_SESSION["id_user"])){  ?>
+
+                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
+                    
+                    <?php }else{?>
+
+                    <li id="login"><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+
+                    <?php }?>
                 </ul>
             </nav>
             <nav class="mobile right">
@@ -49,8 +58,17 @@
 					<li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>login">ENTRAR</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
+                    
+					<?php if(!isset($_SESSION["id_user"])){  ?>
+
+                    <li><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
+
+                    <?php }else{?>
+
+                    <li><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+
+                    <?php }?>
                 </ul>
             </nav>
         </div>
