@@ -1,0 +1,91 @@
+<?php     
+    include "../config.php";
+    include "../database/conexao_mysql.php";     
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Salão de Beleza Mãe e Filhas</title>
+		<meta name="description" content="Salão de Beleza">
+		<meta name="robots" content="index, follow">
+		<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
+        <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
+    </head>
+    <body id="body_area_func">
+        <section class="area_func">
+            <div class="inf-func">
+                <div class="avatar-func">
+                    <img src="<?php echo INCLUDE_PATH; ?>images/padrao.jpg" class="left">
+
+                    <div class="text-func">
+                        <p>Olá Jorge</p>
+                        <p>Status: Online</p>
+                    </div>
+
+                    <div class="clear"></div>
+                    <h4>Navegação Principal:</h4>
+                </div> 
+                <div class="links">
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Clientes"><i class="fa fa-pencil-square-o " aria-hidden="true"></i> Gerenciar Clientes</a>
+
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Galeria"><i class="fa fa-picture-o " aria-hidden="true"></i> Gerenciar Galeria</a>
+
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Paginas"><i class="fa fa-align-right " aria-hidden="true"></i> Gerenciar Páginas</a>
+
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Agendamentos"><i class="fa fa-calendar " aria-hidden="true"></i> Gerenciar Agendamentos</a>
+
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Servicos"><i class="fa fa-book " aria-hidden="true"></i> Gerenciar Serviços</a>
+                    
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+            <div class="titulo">
+                <a href="../php/loggout.php" class="right"> <i class="fa fa-sign-out"></i>Logout</a>
+                <a href="<?php echo INCLUDE_PATH; ?>" class="right"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <h1>Area de Trabalho</h1>
+            </div>
+            <div class="clear"></div>
+            <div class="page">
+                <div class="area_trabalho">
+                <?php
+               
+                    if(isset($_GET['url'])){
+
+                        $url = strtolower(str_replace("-", "_", $_GET['url']));
+
+                        if(file_exists("pages/".$url.".php"))
+                            include("pages/".$url.".php");
+                        else
+                            include("pages/home.php");
+
+                    }else
+                        include("pages/home.php");
+                    
+                ?>
+                </div>
+            </div>
+            <footer>
+                asdasdasd
+            </footer>
+        </section>  
+
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>js/galeria.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>js/menu.js"></script>
+	</body>
+</html>

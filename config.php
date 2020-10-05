@@ -11,6 +11,7 @@
     define("DB", "tcc");
 
     define("INCLUDE_PATH", "http://localhost/GitHub/Escola/TCC/");
+    define("INCLUDE_PATH_PAINEL", "http://localhost/GitHub/Escola/TCC/painel/");
 
     include("php/functions.php");
 ?>

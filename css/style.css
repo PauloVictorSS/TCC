@@ -546,7 +546,7 @@ section.area_usuario{
 section.area_usuario div.inf-usuario{
     float: left;
     width: 300px;
-    background: #f5deb3;
+    background:	#DCDCDC;
     padding: 10px;
     height: 100%;
     text-align: center;
@@ -558,7 +558,7 @@ section.area_usuario div.inf-usuario{
 }
 section.area_usuario div.titulo{
     width: calc(100% - 300px);
-    background: #cd853f;
+    background:	#696969;
     text-align: center;
     padding: 10px;
     height: 50px;
@@ -574,7 +574,10 @@ section.area_usuario div.agendamentos{
     height: calc(100% - 50px);
     overflow-x:hidden;
     overflow-y: auto;
-    background: #f2f2f2;
+    background-image: url('../images/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
 }
 
 section.area_usuario div.inf-usuario div.avatar-usuario{
@@ -629,7 +632,7 @@ section.area_usuario div.inf-usuario table.dados_pessoais{
 
 section.area_usuario div.inf-usuario table.dados_pessoais tr th{
     text-align: center;
-    background: #d2691e;
+    background:	#696969;
 }
 
 section.area_usuario div.inf-usuario table.dados_pessoais tr td{
@@ -637,7 +640,7 @@ section.area_usuario div.inf-usuario table.dados_pessoais tr td{
 }
 
 section.area_usuario div.inf-usuario table.dados_pessoais tr td:nth-child(1){
-    background: #deb887;
+    background: #A9A9A9;
 }
 
 section.area_usuario div.inf-usuario table.dados_pessoais th,
@@ -690,15 +693,15 @@ section.area_usuario div.agendamentos table.agendamentos_feitos td{
 }
 
 section.area_usuario div.agendamentos table.agendamentos_feitos th.title{
-    background: #d2691e;
+    background:	#696969;
 }
 
 section.area_usuario div.agendamentos table.agendamentos_feitos td{
-    background: #f5dcb7;
+    background:	#DCDCDC;
 }
 
 section.area_usuario div.agendamentos table.agendamentos_feitos tr td:nth-child(1){
-    background: #deb887;
+    background:#A9A9A9;
 }
 
 section.area_usuario div.agendamentos table.agendamentos_feitos tr td.servicos{
@@ -747,7 +750,6 @@ section.erro404 a{
 section.erro404 p a:hover{
     text-decoration: underline;
 }
-
 
 /** Medias para telas menores **/
 
@@ -907,7 +909,4 @@ section.erro404 p a:hover{
     body#body_area_usuario{
         overflow-y: auto !important;
     }
-    
-    
-
 }
