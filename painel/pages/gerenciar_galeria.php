@@ -1,5 +1,5 @@
 <h2>Gerenciamento da Galeria</h2>
-<hr>
+<hr><br>
 <?php
 
     if(isset($_POST["acao"])){
@@ -67,11 +67,10 @@
                     <div class='clear'></div>
                 </form>
                 <div class='clear'></div>
-            </div>";
+            </div><div class='clear'></div>";
 
             $cont = 1;
         }
     }
 
 ?>
-<br><br><br><br><br>
