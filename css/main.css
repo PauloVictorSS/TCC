@@ -70,10 +70,10 @@ div.mensagem a{
 div.mensagem a:hover{
     text-decoration: underline;
 }
-div.green{
-    background: #4eec4e;
+.green{
+    background: #58b958;
 }
-div.red{
+.red{
     background: #eb3c3c;
 }
 

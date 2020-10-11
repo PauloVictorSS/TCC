@@ -1,6 +1,6 @@
 <?php
 
-    $sql = "SELECT * FROM fotos";
+    $sql = "SELECT * FROM `fotos` WHERE statu = 1 ORDER BY RAND() LIMIT 0,8";
 
     $resultado = mysqli_query($conexao, $sql);
 
