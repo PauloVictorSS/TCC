@@ -43,9 +43,14 @@
                     </div>
 
                     <div class="clear"></div>
-                    <h4>Navegação Principal:</h4>
+                    <div class="botao-menu-mobile right">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="clear"></div>
                 </div> 
                 <div class="links">
+                    <h4>Navegação Principal:</h4>
+
                     <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Clientes"><i class="fa fa-pencil-square-o " aria-hidden="true"></i> Gerenciar Clientes</a>
 
                     <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Galeria"><i class="fa fa-picture-o " aria-hidden="true"></i> Gerenciar Galeria</a>
@@ -61,11 +66,11 @@
             </div>
             <div class="clear"></div>
             <div class="titulo">
+                <h1 class="left">Area de Trabalho</h1>
                 <a href="../php/loggout.php" class="right"> <i class="fa fa-sign-out"></i>Logout</a>
                 <a href="<?php echo INCLUDE_PATH; ?>" class="right"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-                <h1>Area de Trabalho</h1>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
             <div class="page">
                 <div class="area_trabalho">
                 <?php
@@ -88,9 +93,7 @@
         </section>  
 
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="<?php echo INCLUDE_PATH; ?>js/galeria.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
-        <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
-        <script src="<?php echo INCLUDE_PATH; ?>js/menu.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/menu.js"></script>
 	</body>
 </html>

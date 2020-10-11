@@ -31,9 +31,13 @@ section.area_func div.inf-func{
     color: white;
 }
 
-section.area_func div.inf-func h4{
-    padding-top: 25px;
-    text-align: left;
+section.area_func div.inf-func div.avatar-func div.botao-menu-mobile{
+    padding-top: 15px;
+    display: none;
+}
+
+section.area_func div.inf-func div.avatar-func div.botao-menu-mobile i{
+    font-size: 25px;
 }
 
 section.area_func div.inf-func div.avatar-func div.text-func{
@@ -56,6 +60,10 @@ section.area_func div.inf-func div.avatar-func img{
 section.area_func div.inf-func div.links{
     text-align: left;
     margin-top: 30px;
+}
+
+section.area_func div.inf-func div.links h4{
+    padding-bottom: 25px;
 }
 
 section.area_func div.inf-func div.links a{
@@ -81,7 +89,6 @@ section.area_func div.titulo{
 
 section.area_func div.titulo h1{
     color: white;
-    margin-left: 14%;
 }
 
 section.area_func div.titulo a{
@@ -152,6 +159,8 @@ section.area_func div.page div.area_trabalho div.bloco form button:hover{
     font-weight: bold;
 }
 
+
+
 @media (max-width: 1150px){
 
     section.area_func div.page div.area_trabalho div.bloco{
@@ -167,7 +176,6 @@ section.area_func div.page div.area_trabalho div.bloco form button:hover{
     }
 
 }
-
 
 @media (max-width: 950px){
     section.area_func div.page div.area_trabalho div.bloco{
@@ -201,9 +209,52 @@ section.area_func div.page div.area_trabalho div.bloco form button:hover{
         height: auto;
         overflow-y: hidden;
     }
-
+    section.area_func div.page div.area_trabalho div.bloco{
+        width: 80%;
+    }
+    section.area_func div.inf-func div.links{
+        display: none;
+        text-align: center;
+        margin: 30px 0;
+    }
+    section.area_func div.inf-func div.avatar-func div.botao-menu-mobile{
+        display: block;
+    }
 }
 
 @media (max-width: 475px){
-    
+
+    section.area_func div.titulo{
+        text-align: left;
+        height: auto;
+    }
+    section.area_func div.titulo h1{
+        margin-left: 0;
+        text-align: center;
+        float: none;
+    }
+    section.area_func div.titulo a{
+        float: unset;
+    }
+    section.area_func div.titulo a[href="../php/loggout.php"]{
+        float: right;
+    }
+    section.area_func div.titulo a+a{
+        margin: 0;
+    }
+
+    section.area_func div.page div.area_trabalho h2{
+        text-align: center;
+    }
+
+    section.area_func div.page div.area_trabalho div.bloco{
+        width: 100%;
+    }
+    section.area_func div.page div.area_trabalho div.bloco form{
+        padding: 5px 0;
+    }
+    section.area_func div.page div.area_trabalho div.bloco form button{
+        min-width: auto;
+    }
+
 }

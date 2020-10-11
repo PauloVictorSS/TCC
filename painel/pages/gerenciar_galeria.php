@@ -1,4 +1,4 @@
-<h2>Gerenciamento da galeria de fotos</h2>
+<h2>Gerenciamento da Galeria</h2>
 <hr>
 <?php
 
