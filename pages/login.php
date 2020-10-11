@@ -4,9 +4,11 @@
         $email = $_POST["email"];
         $senha = hash("sha512", $_POST["senha"]);
 
-        $verifica = "SELECT * FROM cliente WHERE email= '$email' and senha= '$senha'";
+		$verifica = "SELECT * FROM cliente WHERE email= '$email' and senha= '$senha'";
+		$verifica2 = "SELECT * FROM funcionario WHERE email= '$email' and senha= '$senha'";
 
-        $resultado = mysqli_query($conexao, $verifica);
+		$resultado = mysqli_query($conexao, $verifica);
+		$resultado2 = mysqli_query($conexao, $verifica2);
 
         if(mysqli_num_rows($resultado) == 1){
 			$url = INCLUDE_PATH."pages/area_do_usuario.php";
@@ -18,7 +20,18 @@
 			echo "<div class='mensagem green'>Logado com sucesso! <br>ID do Usuário -> ".$_SESSION["id_user"]."</div>";
 			
 			header("Location: $url");
-        }
+		}
+		else if(mysqli_num_rows($resultado2) == 1){
+			$url = INCLUDE_PATH_PAINEL;
+
+			$inf_usuario = mysqli_fetch_array($resultado2);
+
+			$_SESSION["id_func"] = $inf_usuario['id'];
+
+			echo "<div class='mensagem green'>Logado com sucesso! <br>ID do Usuário -> ".$_SESSION["id_user"]."</div>";
+			
+			header("Location: $url");
+		}
         else{
             echo "<div class='mensagem red'>E-mail ou senha incorretos!</div>";
         }

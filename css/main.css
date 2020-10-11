@@ -71,7 +71,7 @@ div.mensagem a:hover{
     text-decoration: underline;
 }
 div.green{
-    background: #53bd53;
+    background: #4eec4e;
 }
 div.red{
     background: #eb3c3c;
@@ -81,6 +81,16 @@ body#body_area_usuario{
     background: #eee;
     overflow-x: hidden;
 	overflow-y: hidden;
+}
+
+div.bola{
+    display: inline-block;
+    background: #4eec4e;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+    margin-top: 3.1px;
 }
 
 @media (max-width: 1100px){

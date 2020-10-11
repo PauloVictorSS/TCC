@@ -199,8 +199,8 @@ section.home div#contato #divForm #mensagem{
 	color: white;
 	border: 1px solid white;
 	width: 50%;
-	resize: vertical;
-    min-height: 106px;
+	resize: none;
+    height: 106px;
     margin: 0 auto;
     padding: 4px 4px;
 }
@@ -665,7 +665,7 @@ section.area_usuario div.inf-usuario div.buttons a#agendar:hover{
     text-decoration: underline;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos{
+section.area_func div.agendamentos table.agendamentos_feitos{
     width: 100%;
     max-width: 800px;
     border: 1px solid black;
@@ -675,36 +675,36 @@ section.area_usuario div.agendamentos table.agendamentos_feitos{
     box-shadow: 4px 4px 4px #777;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos form button{
+section.area_func div.agendamentos table.agendamentos_feitos form button{
     background: none;
     border: none;
     cursor: pointer;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos form button i{
+section.area_func div.agendamentos table.agendamentos_feitos form button i{
     font-size: 23px;
     color: white;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos th,
-section.area_usuario div.agendamentos table.agendamentos_feitos td{
+section.area_func div.agendamentos table.agendamentos_feitos th,
+section.area_func div.agendamentos table.agendamentos_feitos td{
     padding: 5px;
     border: 1px solid black;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos th.title{
+section.area_func div.page div.area_trabalho div.agendamentos table.agendamentos_feitos th.title{
     background:	#696969;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos td{
+section.area_func div.agendamentos table.agendamentos_feitos td{
     background:	#DCDCDC;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos tr td:nth-child(1){
+section.area_func div.agendamentos table.agendamentos_feitos tr td:nth-child(1){
     background:#A9A9A9;
 }
 
-section.area_usuario div.agendamentos table.agendamentos_feitos tr td.servicos{
+section.area_func div.agendamentos table.agendamentos_feitos tr td.servicos{
     text-align: center;
     background: white;
 }

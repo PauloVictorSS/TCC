@@ -1,14 +1,44 @@
 <?php     
     include "../config.php";
     include "../database/conexao_mysql.php";     
-?>
-<?php
+
+    $select = "select * from cliente where id=".$_SESSION["id_user"];    
+    $result = mysqli_query($conexao, $select);
+
+    $user = mysqli_fetch_array($result);
 
     if(isset($_POST["action"])){
 
         $delete = "DELETE FROM agendamento WHERE id =".$_POST["action"];
 
         $resultado = mysqli_query($conexao, $delete);
+
+    }
+
+    if(isset($_POST["btn-foto"])){
+        $imagem = $_FILES['image']['tmp_name'];
+        $tamanho = $_FILES['image']['size'];
+        $tipoImg = $_FILES['image']['type'];
+        $nome = $_FILES['image']['name'];
+
+        if(!empty($imagem)){
+            $fp = fopen($imagem, "rb");
+            $conteudo = fread($fp, $tamanho);
+            $conteudo = addslashes($conteudo);
+            $data_hoje = date('d/m/Y');
+            $id_user = $_SESSION["id_user"];
+
+            $insercao = "INSERT INTO fotos (tamanho, id_cliente, data_post, statu) VALUES ($conteudo, $id_user, '$data_hoje', 0)";
+
+            $executar = mysqli_query($conexao, $insercao);
+            if(mysqli_affected_rows($conexao) == 1)
+                echo "<div class='mensagem green'>Deu Bom</div>";
+            else
+                echo "<div class='mensagem red'>Deu ruim</div>";
+        }
+        else{
+            $conteudo = "";
+        }
 
     }
 
@@ -43,7 +73,8 @@
 		<title>Salão de Beleza Mãe e Filhas</title>
 		<meta name="description" content="Salão de Beleza">
 		<meta name="robots" content="index, follow">
-		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
@@ -55,108 +86,95 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
         <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
     </head>
-    <body id="body_area_usuario">
-        
-        <section class="area_usuario">
+    <body id="body_area_func">
+        <section class="area_func">
+            <div class="inf-func">
+                <div class="avatar-func">
+                    <img src="<?php echo INCLUDE_PATH; ?>images/padrao.jpg" class="left">
 
-                <div class="inf-usuario">
-                    <div class="avatar-usuario">
-                        <i class="fa fa-user"></i>
+                    <div class="text-func">
+                        <p>Olá <?php echo $user["nome"]; ?></p>
+                        <p class="left">Status:   </p>
+                        <p id="status"> <div class="bola"></div> Online</p>
+                        
                     </div>
-                    <div class="infs">
-                        <h4>Email:<br><?php echo $email;?></h4>
-                        <table class="dados_pessoais">
-                            <tr>
-                                <th colspan="2">Dados Pessoais</th>
-                            </tr>
-                            <tr>
-                                <td>Nome</td>
-                                <td><?php echo $nome;?></td>
-                            </tr>
-                            <tr>
-                                <td>Telefone</td>
-                                <td><?php echo $tel;?></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="buttons">
-                        <a href="<?php echo INCLUDE_PATH; ?>escolher_servicos" id="agendar">Agendar serviço</a>
-                        <div class="clear"></div>
-                        <a href="../php/loggout.php" class="right"><br><i class="fa fa-sign-out"></i> Logout</a>
-                        <a href="<?php echo INCLUDE_PATH; ?>" class="left"><br><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-                        <div class="clear"></div>
-                    </div>
-                    
+
+                    <div class="clear"></div>
+                    <h4>Navegação Principal:</h4>
+                </div> 
+                <div class="links">
+                    <a href="<?php echo INCLUDE_PATH;?>escolher_servicos"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar um Serviço</a>
                 </div>
-                <div class="titulo">
-                    <h1>Agendamentos</h1>
-                </div>
-                <div class="agendamentos">
+                
+            </div>
+            <div class="clear"></div>
+            <div class="titulo">
+                <a href="../php/loggout.php" class="right"> <i class="fa fa-sign-out"></i>Logout</a>
+                <a href="<?php echo INCLUDE_PATH; ?>" class="right"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <h1>Area do Cliente</h1>
+            </div>
+            <div class="clear"></div>
+            <div class="page">
+                <div class="area_trabalho">
+                    <h2>Adicionar Foto</h2>
+                    <hr><br>
+                    <form enctype="multipart/form-data" action="area_do_usuario.php" method="POST" id="form-disser" class="red formulario">
+                        <label for="image">Escolha uma foto para o site:</label>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
+                        <input type="file" name="image"><br>
+                        <button type="submit" value="2"  name="btn-foto" form="form-disser" class="btn-enviar">Enviar</button><br><br>
+                    </form>
+                    <hr>
+                    <div class="agendamentos">
+                    <?php  
+                        foreach ($agendamentos as $key => $value) {
+                            $consulta3 = "SELECT * FROM agendamento WHERE id = $value";
 
-                    
-                        <?php  
-                            foreach ($agendamentos as $key => $value) {
-
-                                $consulta3 = "SELECT * FROM agendamento WHERE id = $value";
-
-                                $result3 = mysqli_query($conexao, $consulta3);
+                            $result3 = mysqli_query($conexao, $consulta3);
                             
-                                $agendamentos = array();
+                            $agendamentos = array();
                             
-                                while($aged = mysqli_fetch_array($result3)){
+                            while($aged = mysqli_fetch_array($result3)){
                             
-                                    $data_agendada = $aged["data_agendada"];
-                                    $hora_agendada = $aged["hora_agendada"];
-                                    $servicos_agendados = explode(";", $aged["servico_agendados"]);
-                                    $duracao = $aged["tempo_estimado"];
-                                    $preco = "R$".$aged["preco_estimado"].",00";
+                                $data_agendada = $aged["data_agendada"];
+                                $hora_agendada = $aged["hora_agendada"];
+                                $servicos_agendados = explode(";", $aged["servico_agendados"]);
+                                $duracao = $aged["tempo_estimado"];
+                                $preco = "R$".$aged["preco_estimado"].",00";
 
-                                    $horas = intdiv($duracao, 60);
-                                    $min = $duracao % 60;
+                                $horas = intdiv($duracao, 60);
+                                $min = $duracao % 60;
 
-                                    if($horas != 0 and $min != 0)
-                                        $duracao = $horas." horas ".$min." minutos";
-                                    elseif($horas == 0 and $min != 0)
-                                        $duracao = $min." minutos";   
-                                    else
-                                        $duracao = $horas." horas";
+                                unset($servicos_agendados[count($servicos_agendados) - 1]);
 
-                                }
+                                if($horas != 0 and $min != 0)
+                                    $duracao = $horas." horas ".$min." minutos";
+                                elseif($horas == 0 and $min != 0)
+                                    $duracao = $min." minutos";   
+                                else
+                                    $duracao = $horas." horas";
+                            }
                         ?>
-
                         <table class="agendamentos_feitos">
-
                             <tr>
-                                <th colspan="2" class="title">
-                                    
+                                <th colspan="2" class="title">        
                                 <form action="area_do_usuario.php" method="POST">
-
                                     <button name="action" value="<?php echo $value; ?>" class="right"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                </form>
-                                
+                                </form>                               
                                 Serviços Agendados</th>
                                 <div class="clear"></div>
                             </tr>
                             <tr>
                                 <td colspan="2" class="servicos">
-
-                                <?php
-                                
+                                <?php                               
                                     foreach ($servicos_agendados as $key => $value) {
-
-                                        $consulta4 = "SELECT nome FROM servicos_prestados WHERE id = $value";
-        
-                                        $result4 = mysqli_query($conexao, $consulta4);
-        
-                                        while($nome = mysqli_fetch_array($result4)){
-        
-                                        echo "<p>".$nome[0]."</p>";
-        
+                                        $consulta4 = "SELECT nome FROM servicos_prestados WHERE id = $value";     
+                                        $result4 = mysqli_query($conexao, $consulta4);      
+                                        while($nome = mysqli_fetch_array($result4)){       
+                                            echo "<p>".$nome[0]."</p>";
                                         }
                                     }
-
                                 ?>
-
                                 </td>
                             </tr>
                             <tr>
@@ -175,16 +193,13 @@
                                 <td>Preço</td>
                                 <td><?php echo $preco; ?></td>
                             </tr>
-
                         </table>
-
                         <?php }?>
-                    
                 </div>
                 <div class="clear"></div>
-
-        </section>
-
+                </div>
+            </div>
+        </section>  
 
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/galeria.js"></script>

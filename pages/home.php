@@ -61,8 +61,20 @@
 <section class="home">
 		<div class="banner">
 			<div class="text">
-				<h2> Bem-vindo! </h2>
-				<h3> A experiência completa do Salão de Beleza Mãe e Filhas</h3>
+				<?php
+					$consulta = "SELECT * FROM textos WHERE id = 7";
+					$limite = mysqli_query($conexao, $consulta);
+					if(mysqli_num_rows($limite) != 0){
+
+						while($num_rows = mysqli_fetch_array($limite)){
+							$titulo = $num_rows['titulo'];
+							$texto = $num_rows['texto'];							
+						}
+					
+						echo "<h2>$titulo</h2>";
+						echo "<h3>$texto</h3>";
+					}
+				?>
 			</div>
 			
 		</div>
@@ -86,8 +98,20 @@
 					<img src="images/fotoQuemSomos.jpg" id="imgQuemSomos">
 				</div>
 				<div class="w50 right">
-					<h1>SOBRE NÓS</h1>
-					<p><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis officia ratione quam obcaecati iusto incidunt dolorem laborum atque ducimus deleniti, cumque distinctio, animi hic fugiat soluta cum. Id, neque saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam omnis tempora, numquam sint deserunt temporibus placeat, reprehenderit illum saepe voluptatibus? Laboriosam quas quidem nam nulla. Nostrum mollitia amet dolorem.</p>
+					<?php
+						$consulta = "SELECT * FROM textos WHERE id = 1";
+						$limite = mysqli_query($conexao, $consulta);
+						if(mysqli_num_rows($limite) != 0){
+
+							while($num_rows = mysqli_fetch_array($limite)){
+								$titulo = $num_rows['titulo'];
+								$texto = $num_rows['texto'];							
+							}
+						
+							echo "<h1>$titulo</h1>";
+							echo "<p><br>$texto</p>";
+						}
+					?>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -97,12 +121,28 @@
 			<div id="divForm">
 				<h1>_</h1>
 				<h1>Faça um visita</h1><br>
-				<p>Rua Santiago, 537 Sumaré, SP</p>
-				<p>maefilhasoficial@gmail.com</p>
-				<p>Tel: (19) 3838-4424</p><br>
-				<p>HORÁRIO DE FUNCIONAMENTO</p>
-				<p>Ter - Sex: 8:00 - 20:00<br>Sábado: 8:00 - 22:00</p><br>
-				<form action="<?php echo INCLUDE_PATH; ?>" method="POST">
+				<?php
+					$consulta = "SELECT * FROM textos WHERE id BETWEEN 2 AND 6";
+					$limite = mysqli_query($conexao, $consulta);
+					if(mysqli_num_rows($limite) != 0){
+
+						while($num_rows = mysqli_fetch_array($limite)){
+							$texto = $num_rows['texto'];
+
+							echo "<p>";
+							if($num_rows['id'] == 4){
+								echo "Tel: ";
+							}
+							elseif($num_rows['id'] == 5){
+								echo "HORÁRIO DE FUNCIONAMENTO</p>";
+								echo "<p>";
+							}
+								
+							echo "$texto</p>";
+						}
+					}
+				?><br>
+				<form action="" method="GET">
 					<div id="divInput" class="w50 left">
 						<input type="text" name="nome" placeholder="Nome" class="left">
 						<input type="text" name="email" placeholder="Email" class="left">

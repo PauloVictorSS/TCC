@@ -5,7 +5,31 @@
 
     //Setando as informações do dia escolhido
     include("php/agendamento/mostraDataDia.php"); 
+    
+    if(isset($_POST["action"])){
+        $data_agendamento = date('d/m/Y');
+        $hora_escolhido = $_SESSION["horario_escolhido"];
+        $hora_agendamento = date("H:i");
+        $servicos="";
 
+        $data_escolhida_format = $data_escolhida->format('d/m/Y');
+
+        foreach ($_SESSION["servicosEscolhidos"] as $key => $value) {
+            $servicos = $servicos.$value.";";
+        }
+        
+        $id_cliente = $_SESSION["id_user"];    
+        
+        $comando = mysqli_query($conexao, "INSERT INTO agendamento (data_agendada, data_agendamento, hora_agendada, hora_agendamento, servico_agendados, id_cliente, tempo_estimado, preco_estimado) values ('$data_escolhida_format', '$data_agendamento', '$hora_escolhido', '$hora_agendamento', '$servicos', $id_cliente, $duracaoMinutos, $precoTotal)");
+
+        if(mysqli_affected_rows($conexao) == 1)
+            echo "<div class='mensagem green'>Deu Bom</div>";
+        else{
+            echo "<div class='mensagem red'>Deu ruim</div>";
+        }
+
+    }
+    
 ?>
 <section class="agendamento">
     <h2>Confirmar Agendamento</h2>
@@ -17,7 +41,6 @@
             foreach ($nomesServicosEscolhidos as $key => $nome) {
                 echo "<p>$nome</p>";
             }
-
         ?>
 
         <br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>
@@ -30,7 +53,7 @@
         <p><b>Horário prévio de saída: </b><?php echo $_SESSION["hora_Prevista_Saida"]; ?></p>
 
     </div>
-    <form action="<?php echo INCLUDE_PATH; ?>escolher_horario" method="POST">
+    <form action="<?php echo INCLUDE_PATH; ?>confirmar_agendamento" method="POST">
 
         <button type="submit" value="acao" name="action" id="btn-confirmar">Confirmar e Agendar</button>
         <div class="clear"></div>
@@ -39,5 +62,4 @@
         <div class="clear"></div>
 
     </form>
-
 </section>

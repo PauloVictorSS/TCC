@@ -1,6 +1,12 @@
 <?php     
     include "../config.php";
     include "../database/conexao_mysql.php";     
+
+    $select = "select * from funcionario where id=".$_SESSION["id_func"];    
+    $result = mysqli_query($conexao, $select);
+
+    $func = mysqli_fetch_array($result);
+
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +36,10 @@
                     <img src="<?php echo INCLUDE_PATH; ?>images/padrao.jpg" class="left">
 
                     <div class="text-func">
-                        <p>Olá Jorge</p>
-                        <p>Status: Online</p>
+                        <p>Olá <?php echo $func["nome"]; ?></p>
+                        <p class="left">Status:   </p>
+                        <p id="status"> <div class="bola"></div> Online</p>
+                        
                     </div>
 
                     <div class="clear"></div>
