@@ -80,19 +80,32 @@
 		</div>
 			
 		<div class="corpo" id="galeria">
-			<div class="galeria">
 
-				<section class="banner-principal">
+			<?php
 
-					<?php include "php/galeria_imagens.php";  ?>
+				$sql = "SELECT * FROM `fotos` WHERE statu = 1";
+				$resultado = mysqli_query($conexao, $sql);
 
-					<div class="overlay"></div>
-					<div class="bullets">
-					
-					</div>
-				</section>
-			</div>
-			<div class="clear"></div>
+				if(mysqli_num_rows($resultado) != 0){
+			
+			?>
+
+				<div class="galeria">
+
+					<section class="banner-principal">
+
+						<?php include "php/galeria_imagens.php";  ?>
+
+						<div class="overlay"></div>
+						<div class="bullets">
+						
+						</div>
+					</section>
+				</div>
+				<div class="clear"></div>
+
+			<?php } ?>
+
 			<div id="sobre">
 				<div class="w50 left">
 					<img src="images/fotoQuemSomos.jpg" id="imgQuemSomos">

@@ -37,13 +37,17 @@
 					<li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
 
-                    <?php if(!isset($_SESSION["id_user"])){  ?>
-
-                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
-                    
-                    <?php }else{?>
+                    <?php if(isset($_SESSION["id_user"])){  ?>
 
                     <li id="login"><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+                    
+                    <?php } elseif(isset($_SESSION["id_func"])){  ?>
+
+                    <li id="login"><a href="<?php echo INCLUDE_PATH_PAINEL; ?>" id="login">ÁREA DO FUNCIONÁRIO</a></li>
+
+                    <?php } else{?>
+                    
+                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
 
                     <?php }?>
                 </ul>
