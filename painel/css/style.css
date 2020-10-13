@@ -220,6 +220,67 @@ section.area_func div.page div.area_trabalho div.paginas table td:nth-child(4){
 }
 
 
+/* Gerenciar Agendamento */
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos{
+    display: inline-block;
+    width: 67%;
+    border-right: 1px solid black;
+    padding-right: 5px;
+}
+
+section.area_func div.page div.area_trabalho div.agenda_hoje{
+    display: inline-block;
+    padding-left: 5px;
+    width: 33%;
+}
+
+section.area_func div.page div.area_trabalho div.agenda_hoje p{
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #444;
+}
+
+section.area_func div.page div.area_trabalho div.agenda_hoje div.agendamento p{
+    text-align: left;
+    margin-top: 10px;
+    padding: 0;
+    border: none;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table{
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr th{
+    text-align: center;
+    background:	black;
+    color: white;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr td{
+    background: white;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr td:nth-child(1){
+    background: #A9A9A9;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr:nth-child(2) td:nth-child(1){
+    text-align: center;
+}
+
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table th,
+section.area_func div.page div.area_trabalho div.agendamentos_feitos table td{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+
 /* Gerenciamento das páginas */
 
 section.area_func div.page div.area_trabalho div.servicos table{
@@ -301,8 +362,35 @@ section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(
 }
 
 @media (max-width: 950px){
+
     section.area_func div.page div.area_trabalho div.bloco{
         width: 100%;
+    }
+
+    section.area_func div.page div.area_trabalho div.agendamentos_feitos{
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #444;
+        padding: none;
+    }
+    
+    section.area_func div.page div.area_trabalho div.agenda_hoje{
+        display: block;
+        padding: none;
+        padding-top: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    section.area_func div.page div.area_trabalho div.agenda_hoje p{
+        padding-bottom: none;
+        border-bottom: none;
+    }
+    
+    section.area_func div.page div.area_trabalho div.agenda_hoje div.agendamento p{
+        text-align: center;
+        margin-top: 10px;
     }
 }
 
