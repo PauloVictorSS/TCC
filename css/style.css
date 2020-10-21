@@ -138,6 +138,9 @@ section.home div.corpo div#sobre h1{
 
 section.home div#contato{
 	background-image: url('../images/fundoForm.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
     width: 100%;
     padding: 30px 0;
     min-height: 700px;

@@ -12,7 +12,7 @@
         $hora_agendamento = date("H:i");
         $servicos="";
 
-        $data_escolhida_format = $data_escolhida->format('d/m/Y');
+        $data_escolhida_format = $data_escolhida->format('Y-m-d');
 
         foreach ($_SESSION["servicosEscolhidos"] as $key => $value) {
             $servicos = $servicos.$value.";";

@@ -4,7 +4,7 @@ Gerenciar Agenda
 <div class="agendamentos_feitos left">
 <?php
 
-    $consulta2 = "SELECT * FROM agendamento ORDER BY data_agendada";
+    $consulta2 = "SELECT * FROM agendamento WHERE data_agendada > '".date('Y-m-d')."'  ORDER BY data_agendada";
     $result2 = mysqli_query($conexao, $consulta2);
 
     $agendamentos = array();
@@ -21,7 +21,6 @@ Gerenciar Agenda
 
         foreach ($agendamentos as $key => $value) {
             $consulta3 = "SELECT * FROM agendamento WHERE id = $value";
-
             $result3 = mysqli_query($conexao, $consulta3);
             
             $agendamentos = array();
@@ -67,7 +66,7 @@ Gerenciar Agenda
                 </tr>
                 <tr>
                     <td>Data escolhida</td>
-                    <td><?php echo $data_agendada; ?></td>
+                    <td><?php echo date( 'd/m/Y' , strtotime($data_agendada) ); ?></td>
                 </tr>
                 <tr>
                     <td>Horário escolhido</td>
@@ -95,56 +94,64 @@ Gerenciar Agenda
     <p>Hoje: <?php echo date('d/m'); ?> </p>
 <?php
 
-    $hoje = "22/10/2020";
+    $hoje = date('d/m/Y');
 
     $consulta2 = "SELECT * FROM agendamento WHERE data_agendada='".$hoje."' ORDER BY hora_agendada";
     $result2 = mysqli_query($conexao, $consulta2);
 
     $agendamentos = array();
 
-    while($aged = mysqli_fetch_array($result2)){
+    if(mysqli_num_rows($result2) != 0){
 
-        $agendamentos[$aged["id"]] = $aged["id"];
-    
-        $usuario = "select * from cliente where id = ".$aged["id_cliente"];
+        while($aged = mysqli_fetch_array($result2)){
 
-        $result = mysqli_query($conexao, $usuario);
+            $agendamentos[$aged["id"]] = $aged["id"];
+        
+            $usuario = "select * from cliente where id = ".$aged["id_cliente"];
 
-        $infs_usuario = mysqli_fetch_array($result);
+            $result = mysqli_query($conexao, $usuario);
 
-        foreach ($agendamentos as $key => $value) {
-            $consulta3 = "SELECT * FROM agendamento WHERE id = $value";
+            $infs_usuario = mysqli_fetch_array($result);
 
-            $result3 = mysqli_query($conexao, $consulta3);
             
-            $agendamentos = array();
-            
-            while($aged = mysqli_fetch_array($result3)){
-            
-                $data_agendada = $aged["data_agendada"];
-                $hora_agendada = $aged["hora_agendada"];
-                $servicos_agendados = explode(";", $aged["servico_agendados"]);
-                $duracao = $aged["tempo_estimado"];
-                $preco = "R$".$aged["preco_estimado"].",00";
+            foreach ($agendamentos as $key => $value) {
+                $consulta3 = "SELECT * FROM agendamento WHERE id = $value";
 
-                $horas = intdiv($duracao, 60);
-                $min = $duracao % 60;
+                $result3 = mysqli_query($conexao, $consulta3);
+                
+                $agendamentos = array();
 
-                unset($servicos_agendados[count($servicos_agendados) - 1]);
+                
+                    while($aged = mysqli_fetch_array($result3)){
+                    
+                        $data_agendada = $aged["data_agendada"];
+                        $hora_agendada = $aged["hora_agendada"];
+                        $servicos_agendados = explode(";", $aged["servico_agendados"]);
+                        $duracao = $aged["tempo_estimado"];
+                        $preco = "R$".$aged["preco_estimado"].",00";
 
-                if($horas != 0 and $min != 0)
-                    $duracao = $horas." horas ".$min." minutos";
-                elseif($horas == 0 and $min != 0)
-                    $duracao = $min." minutos";   
-                else
-                    $duracao = $horas." horas";
-            }
+                        $horas = intdiv($duracao, 60);
+                        $min = $duracao % 60;
+
+                        unset($servicos_agendados[count($servicos_agendados) - 1]);
+
+                        if($horas != 0 and $min != 0)
+                            $duracao = $horas." horas ".$min." minutos";
+                        elseif($horas == 0 and $min != 0)
+                            $duracao = $min." minutos";   
+                        else
+                            $duracao = $horas." horas";
+                    }
 ?>
         <div class="agendamento">
             <p><?php echo $hora_agendada; ?> - <?php echo $infs_usuario["nome"]; ?> - <?php echo $duracao; ?></p>
         </div>
 <?php 
-        }
+            } 
+        }   
+    }
+    else{
+        echo'<div class="agendamento"><p>Nenhum serviço agendado para hoje</p></div>';
     }
 ?>
 <div class="clear"></div>

@@ -145,17 +145,19 @@
 							echo "<p>";
 							if($num_rows['id'] == 4){
 								echo "Tel: ";
-							}
-							elseif($num_rows['id'] == 5){
-								echo "HORÁRIO DE FUNCIONAMENTO</p>";
-								echo "<p>";
-							}
-								
+							}	
 							echo "$texto</p>";
 						}
-					}
-				?><br>
-				<form action="" method="GET">
+                    }
+                ?>
+                <br>
+                <p>Horários de funcionamento</p>
+                <p>Terça - Sexta</p>
+                <p>08:00 - 20:00</p>
+                <p>Sábado</p>
+                <p>08:00 - 22:00</p>
+                <br>
+				<form action="<?php echo INCLUDE_PATH; ?>" method="POST">
 					<div id="divInput" class="w50 left">
 						<input type="text" name="nome" placeholder="Nome" class="left">
 						<input type="text" name="email" placeholder="Email" class="left">

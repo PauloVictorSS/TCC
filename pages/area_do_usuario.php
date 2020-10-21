@@ -15,33 +15,6 @@
 
     }
 
-    if(isset($_POST["btn-foto"])){
-        $imagem = $_FILES['image']['tmp_name'];
-        $tamanho = $_FILES['image']['size'];
-        $tipoImg = $_FILES['image']['type'];
-        $nome = $_FILES['image']['name'];
-
-        if(!empty($imagem)){
-            $fp = fopen($imagem, "rb");
-            $conteudo = fread($fp, $tamanho);
-            $conteudo = addslashes($conteudo);
-            $data_hoje = date('d/m/Y');
-            $id_user = $_SESSION["id_user"];
-
-            $insercao = "INSERT INTO fotos (tamanho, id_cliente, data_post, statu) VALUES ($conteudo, $id_user, '$data_hoje', 0)";
-
-            $executar = mysqli_query($conexao, $insercao);
-            if(mysqli_affected_rows($conexao) == 1)
-                echo "<div class='mensagem green'>Deu Bom</div>";
-            else
-                echo "<div class='mensagem red'>Deu ruim</div>";
-        }
-        else{
-            $conteudo = "";
-        }
-
-    }
-
     $consulta = "SELECT * FROM cliente WHERE id = ".$_SESSION["id_user"];
 
     $result = mysqli_query($conexao, $consulta);
@@ -59,7 +32,6 @@
     $agendamentos = array();
 
     while($aged = mysqli_fetch_array($result2)){
-
         $agendamentos[$aged["id"]] = $aged["id"];
     }
 
@@ -115,14 +87,42 @@
             </div>
             <div class="clear"></div>
             <div class="page">
+                <?php
+                    if(isset($_POST["btn-foto"])){
+                        $imagem = $_FILES['image']['tmp_name'];
+                        $tamanho = $_FILES['image']['size'];
+                        $tipoImg = $_FILES['image']['type'];
+                        $nome = $_FILES['image']['name'];
+
+                        if(!empty($imagem)){
+                            $fp = fopen($imagem, "rb");
+                            $conteudo = fread($fp, $tamanho);
+                            $conteudo = addslashes($conteudo);
+                            $data_hoje = date('d/m/Y');
+                            $id_user = $_SESSION["id_user"];
+
+                            $insercao = "INSERT INTO fotos (tamanho, id_cliente, data_post, statu) VALUES ('$conteudo', $id_user, '$data_hoje', 0)";
+
+                            $executar = mysqli_query($conexao, $insercao);
+                            if(mysqli_affected_rows($conexao) == 1)
+                                echo "<div class='mensagem green'>Deu Bom</div>";
+                            else
+                                echo "<div class='mensagem red'>Deu ruim</div>";
+                        }
+                        else{
+                            $conteudo = "";
+                        }
+
+                    }
+                ?>
                 <div class="area_trabalho">
                     <h2>Adicionar Foto</h2>
                     <hr><br>
-                    <form enctype="multipart/form-data" action="area_do_usuario.php" method="POST" id="form-disser" class="red formulario">
-                        <label for="image">Escolha uma foto para o site:</label>
+                    <form enctype="multipart/form-data" action="area_do_usuario.php" method="POST" id="imagem" class="red formulario">
+                        <label for="image">Escolha uma foto para a galeria do site:</label>
                         <input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
-                        <input type="file" name="image"><br>
-                        <button type="submit" value="2"  name="btn-foto" form="form-disser" class="btn-enviar">Enviar</button><br><br>
+                        <input type="file" name="image">
+                        <button type="submit" value="2"  name="btn-foto" form="imagem" class="btn-enviar">Enviar</button>
                     </form>
                     <hr>
                     <div class="agendamentos">
