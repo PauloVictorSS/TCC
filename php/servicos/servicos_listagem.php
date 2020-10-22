@@ -2,7 +2,7 @@
 
     $pagina = 1;
 		
-	$total_reg = 7;
+	$total_reg = 10;
 
 	if(!empty($_GET['pagina']))
 		$pagina = $_GET['pagina'];

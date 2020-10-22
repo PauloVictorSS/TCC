@@ -1,9 +1,10 @@
 @media (min-height: 900px){
 
-    section.servicos{
+    section.servicos,
+    section.mapa{
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 49%;
         transform: translate(-50%, -50%);
 
         margin: 0;

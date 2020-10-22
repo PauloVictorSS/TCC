@@ -19,8 +19,8 @@
             //Retornando a url do site
             $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
-            if($url == "lista_servicos")
-                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos.css">';
+            if($url == "lista_servicos" or $url == "mapa")
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos-mapa.css">';
         ?>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
