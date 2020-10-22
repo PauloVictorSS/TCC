@@ -1,9 +1,9 @@
-body#login{
+body.body{
     background: none;
-    background-color: #ddd;
+    background-color: #d7ccc8;
 }
 
-section.login{
+section{
     display: block;
 
     position: absolute;
@@ -19,19 +19,20 @@ section.login{
     box-shadow: 5px 5px 5px #444;
 }
 
-section.login h1{
+section h1{
     text-align: center;
     font-family: 'Yellowtail', cursive;
     font-weight: normal;
     font-size: 60px;
+    line-height: 55px;
 }
 
-section.login form{
+section form{
     margin: 30px 0;
     width: 100%;
 }
 
-section.login input{
+section input{
     padding: 6px .5px;
     width: 100%;
     border: none;
@@ -39,7 +40,7 @@ section.login input{
     margin-bottom: 15px;
 }
 
-section.login form input[type=submit]{
+section form input[type=submit]{
     background: black;
     margin-top: 40px;
     width: 100%;
@@ -48,23 +49,22 @@ section.login form input[type=submit]{
     padding: 8px;
     color: white;
 }
-section.login form input[type=submit]:hover{
+section form input[type=submit]:hover{
     font-weight: bold;
     padding: 10px;
 }
 
-section.login a{
+section a{
     display: block;
     text-align: center;
-    padding-top: 20px;
     font-size: 18px;
 }
 
-section.login a:hover{
+section a:hover{
     text-decoration: underline;
 }
 
-section.login a.logo{
+section a.logo{
     padding: 0;
     width: 75px;
     margin: 0 auto;

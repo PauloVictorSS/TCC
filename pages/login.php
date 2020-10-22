@@ -51,7 +51,7 @@
 		<meta name="description" content="Salão de Beleza">
         <meta name="robots" content="index, follow">
         
-		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/page-login.css">
+		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/page-login-cadastro.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -66,7 +66,7 @@
         <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
 	</head>
 	
-	<body id="login">
+	<body class="body">
 
         <section class="login">
             <a href="<?php echo INCLUDE_PATH; ?>" class="logo"><img src="../images/favicon.ico" alt="Mãe e Filhas"></a>
@@ -78,7 +78,7 @@
 
                 <input type="submit" id="btnLogin" name="btn_action" value="Logar">
             </form>
-            <a href="<?php echo INCLUDE_PATH; ?>cadastro" id="aLogin">Não possui um cadastro?</a>
+            <a href="<?php echo INCLUDE_PATH; ?>pages/cadastro.php" id="aLogin">Não possui um cadastro?</a>
         </section>
 
     </body>

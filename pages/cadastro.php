@@ -1,4 +1,8 @@
 <?php
+
+    include "../config.php";
+    include "../database/conexao_mysql.php";
+
     if(isset($_POST["btn_action"])){
         
         $nome = clear($_POST["nome"]);
@@ -23,31 +27,46 @@
         }
     }
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Salão de Beleza Mãe e Filhas</title>
+		<meta name="description" content="Salão de Beleza">
+        <meta name="robots" content="index, follow">
+        
+		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/page-login-cadastro.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
 
-<section class="cadastro">
-	<h1>Crie um Cadastro!</h1>
-	<form action="#" method="POST">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
+        <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
+	</head>
+	
+	<body class="body">
+        <section class="cadastro">
+            <a href="<?php echo INCLUDE_PATH; ?>" class="logo"><img src="../images/favicon.ico" alt="Mãe e Filhas"></a>
+            <h1>Crie um Cadastro</h1>
+            <form action="#" method="POST">
 
-		<div class="input-box">
-			<label for='email'>Email:</label>
-			<input type="email" name="email" placeholder="Email" id="email" required>
-		</div>
-		<div class="input-box">
-			<label for='nome'>Nome:</label>
-			<input type="text" name="nome" placeholder="Nome" id="nome" required>
-		</div>
-		<div class="input-box">
-			<label for='senha'>Senha:</label>
-			<input type="password" name="senha" placeholder="Senha" id="senha" required>
-		</div>
-		<div class="input-box">
-			<label for='tel'>Telefone:</label>
-			<input type="text" name="tel" placeholder="Telefone" id="tel" required>
-		</div>
-		
-		<input type="submit" id="btnCadastro" name="btn_action" value="Cadastrar">
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <input type="text" name="nome" placeholder="Nome" id="nome" required>
+                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+                <input type="text" name="tel" placeholder="Telefone" id="tel" required>
+                
+                <input type="submit" id="btnCadastro" name="btn_action" value="Cadastrar">
 
-	</form>
-	<a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="aCadastro">Já tem cadastro?</a>
-</section>
+            </form>
+            <a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="aCadastro">Já tem cadastro?</a>
+        </section>
+    </body>
+</html>
 

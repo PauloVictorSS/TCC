@@ -5,7 +5,7 @@
 
     unset($_SESSION["id_user"], $_SESSION["id_func"]);
 
-    header("Location: ".INCLUDE_PATH."login");
+    header("Location: ".INCLUDE_PATH."pages/login.php");
 
 
 ?>
