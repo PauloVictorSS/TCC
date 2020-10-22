@@ -267,6 +267,10 @@ section.servicos table form button i{
     color: white;
 }
 
+section.servicos a{
+    color: white;
+}
+
 section.servicos a#agendarServico{
     display: block;
     max-width: 150px;

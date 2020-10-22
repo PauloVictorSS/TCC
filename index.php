@@ -10,10 +10,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Salão de Beleza Mãe e Filhas</title>
 		<meta name="description" content="Salão de Beleza">
-		<meta name="robots" content="index, follow">
+        <meta name="robots" content="index, follow">
+        
 		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <?php
+
+            //Retornando a url do site
+            $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+
+            if($url == "lista_servicos")
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos.css">';
+        ?>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -79,9 +90,6 @@
         <div class="clear"></div>
     </header>
         <?php
-
-            //Retornando a url do site
-            $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
             /* Verificando se uma das âncoras foi selecionada */
 
