@@ -25,7 +25,7 @@
     $tel = $infs["telefone"];
     $email = $infs["email"];
 
-    $consulta2 = "SELECT * FROM agendamento WHERE id_cliente = ".$_SESSION["id_user"];
+    $consulta2 = "SELECT * FROM agendamento WHERE id_cliente = ".$_SESSION["id_user"]." ORDER BY data_agendamento ";
 
     $result2 = mysqli_query($conexao, $consulta2);
 
@@ -77,7 +77,6 @@
                 <div class="links">
                     <a href="<?php echo INCLUDE_PATH;?>escolher_servicos"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar um Serviço</a>
                 </div>
-                
             </div>
             <div class="clear"></div>
             <div class="titulo">
@@ -115,15 +114,18 @@
 
                     }
                 ?>
-                <div class="area_trabalho">
-                    <h2>Adicionar Foto</h2>
-                    <hr><br>
-                    <form enctype="multipart/form-data" action="area_do_usuario.php" method="POST" id="imagem" class="red formulario">
-                        <label for="image">Escolha uma foto para a galeria do site:</label>
+                <div class="area_trabalho"> 
+                    <br>
+                    <h3>Enviar uma foto a galeria do site</h3>
+                    <hr>
+                    <form enctype="multipart/form-data" action="area_do_usuario.php" method="POST" id="imagem" class="formulario">
+                        <label for="image">Escolha uma foto:</label>
                         <input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
                         <input type="file" name="image">
                         <button type="submit" value="2"  name="btn-foto" form="imagem" class="btn-enviar">Enviar</button>
                     </form>
+                    <br><br>
+                    <h3>Serviços agendados</h3>
                     <hr>
                     <div class="agendamentos">
                     <?php  
@@ -179,7 +181,7 @@
                             </tr>
                             <tr>
                                 <td>Data escolhida</td>
-                                <td><?php echo $data_agendada; ?></td>
+                                <td><?php echo date( 'd/m/Y' , strtotime($data_agendada) ); ?></td>
                             </tr>
                             <tr>
                                 <td>Horário escolhido</td>
