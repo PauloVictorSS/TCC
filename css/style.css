@@ -416,68 +416,6 @@ section.mapa iframe{
 }
 
 
-/** Login CSS **/
-
-section.login{
-    display: block;
-    margin: 50px auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    color: white;
-    background-color: black;
-}
-
-section.login h1{
-    text-align: center;
-    font-family: 'Yellowtail', cursive;
-    font-weight: normal;
-    font-size: 60px;
-    padding-bottom: 15px;
-}
-
-section.login form{
-    display: block;
-    margin: 30px auto;
-    width: 90%;
-}
-
-section.login form .input-box{
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-section.login .input-box label{
-    display: inline-block;
-    min-width: 70px;
-}
-
-section.login .input-box input{
-    padding: 6px;
-    width: calc(100% - 74px);
-    border: none;
-}
-
-section.login form input[type=submit]{
-    display: block;
-    margin: 40px auto 0;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-section.login a{
-    display: block;
-    text-align: center;
-    padding: 20px 0;
-}
-
-section.login a:hover{
-    text-decoration: underline;
-}
-
-
 /** Cadastro CSS **/
 
 section.cadastro{

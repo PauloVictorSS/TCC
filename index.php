@@ -58,7 +58,7 @@
 
                     <?php } else{?>
                     
-                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
+                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
 
                     <?php }?>
                 </ul>
@@ -77,7 +77,7 @@
                     
 					<?php if(!isset($_SESSION["id_user"])){  ?>
 
-                    <li><a href="<?php echo INCLUDE_PATH; ?>login" id="login">ENTRAR</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
 
                     <?php }else{?>
 

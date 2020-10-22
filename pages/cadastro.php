@@ -48,6 +48,6 @@
 		<input type="submit" id="btnCadastro" name="btn_action" value="Cadastrar">
 
 	</form>
-	<a href="<?php echo INCLUDE_PATH; ?>login" id="aCadastro">Já tem cadastro?</a>
+	<a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="aCadastro">Já tem cadastro?</a>
 </section>
 

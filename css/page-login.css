@@ -1,0 +1,71 @@
+body#login{
+    background: none;
+    background-color: #ddd;
+}
+
+section.login{
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    width: 95%;
+    max-width: 400px;
+
+    background: white;
+    box-shadow: 5px 5px 5px #444;
+}
+
+section.login h1{
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    font-weight: normal;
+    font-size: 60px;
+}
+
+section.login form{
+    margin: 30px 0;
+    width: 100%;
+}
+
+section.login input{
+    padding: 6px .5px;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid black;
+    margin-bottom: 15px;
+}
+
+section.login form input[type=submit]{
+    background: black;
+    margin-top: 40px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+}
+section.login form input[type=submit]:hover{
+    font-weight: bold;
+    padding: 10px;
+}
+
+section.login a{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+section.login a:hover{
+    text-decoration: underline;
+}
+
+section.login a.logo{
+    padding: 0;
+    width: 75px;
+    margin: 0 auto;
+}
