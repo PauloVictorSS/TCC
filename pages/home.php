@@ -62,7 +62,7 @@
 		<div class="banner">
 			<div class="text">
 				<?php
-					$consulta = "SELECT * FROM textos WHERE id = 7";
+					$consulta = "SELECT * FROM textos WHERE id = 5";
 					$limite = mysqli_query($conexao, $consulta);
 					if(mysqli_num_rows($limite) != 0){
 

@@ -104,9 +104,9 @@
 
                             $executar = mysqli_query($conexao, $insercao);
                             if(mysqli_affected_rows($conexao) == 1)
-                                echo "<div class='mensagem green'>Deu Bom</div>";
+                                echo "<div class='mensagem green'>Imagem enviada com sucesso</div>";
                             else
-                                echo "<div class='mensagem red'>Deu ruim</div>";
+                                echo "<div class='mensagem red'>Imagem não enviada, por favor tente mais tarde</div>";
                         }
                         else{
                             $conteudo = "";
@@ -156,7 +156,7 @@
                                 else
                                     $duracao = $horas." horas";
                             }
-                        ?>
+                    ?>
                         <table class="agendamentos_feitos">
                             <tr>
                                 <th colspan="2" class="title">        
@@ -196,7 +196,9 @@
                                 <td><?php echo $preco; ?></td>
                             </tr>
                         </table>
-                        <?php }?>
+                    <?php 
+                        }
+                    ?>
                 </div>
                 <div class="clear"></div>
                 </div>

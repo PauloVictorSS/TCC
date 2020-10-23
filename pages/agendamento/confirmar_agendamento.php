@@ -23,9 +23,9 @@
         $comando = mysqli_query($conexao, "INSERT INTO agendamento (data_agendada, data_agendamento, hora_agendada, hora_agendamento, servico_agendados, id_cliente, tempo_estimado, preco_estimado) values ('$data_escolhida_format', '$data_agendamento', '$hora_escolhido', '$hora_agendamento', '$servicos', $id_cliente, $duracaoMinutos, $precoTotal)");
 
         if(mysqli_affected_rows($conexao) == 1)
-            echo "<div class='mensagem green'>Deu Bom</div>";
+            echo "<div class='mensagem green'>Agendamento confirmado</div>";
         else{
-            echo "<div class='mensagem red'>Deu ruim</div>";
+            echo "<div class='mensagem red'>Agendamento não confirmado, por favor tente mais tarde</div>";
         }
 
     }
