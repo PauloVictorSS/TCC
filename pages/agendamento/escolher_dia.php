@@ -7,7 +7,7 @@
 		
 		if($data_escolhida->format('w') <= 1)
 			echo "<div class='mensagem red'>Neste dia não estaremos funcionando</div>";
-		elseif($atual->format('d/m/Y') <= $data_escolhida->format('d/m/Y')){
+		elseif($atual->format('Y/m/d') < $data_escolhida->format('Y/m/d')){
 
 			$_SESSION["data_escolhida"] = $data_escolhida;
 
@@ -44,6 +44,7 @@
 
 ?>
 <section class="agendamento">
+    <a href="<?php echo INCLUDE_PATH; ?>" class="logo"><img src="images/favicon.ico" alt="Mãe e Filhas"></a>
     <h2>Escolha o dia para o servico</h2>
     <div class="text">
 

@@ -40,6 +40,7 @@
 ?>
 
 <section class="agendamento">
+    <a href="<?php echo INCLUDE_PATH; ?>" class="logo"><img src="images/favicon.ico" alt="Mãe e Filhas"></a>
     <h2>Escolher Horário</h2>
     <div class="text">
 

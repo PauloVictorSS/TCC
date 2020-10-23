@@ -14,6 +14,10 @@ a{
     color: black;
 }
 
+main{
+    width: 100%;       
+}
+
 body{
     background-image: url('../images/fundo.jpg');
     background-repeat: no-repeat;

@@ -36,8 +36,14 @@ section input{
     padding: 6px .5px;
     width: 100%;
     border: none;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid black;
     margin-bottom: 15px;
+    outline: none;
+}
+
+section input:focus{
+    border-bottom: 4px solid black;
+    padding: 7px 1px;
 }
 
 section form input[type=submit]{

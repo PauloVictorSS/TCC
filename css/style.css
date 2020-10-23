@@ -302,13 +302,25 @@ section.agendamento{
     max-width: 500px;
     color: white;
     background-color: black;
+    font-size: 200%;
+}
+
+section.agendamento a.logo{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+}
+
+section.agendamento a.logo img{
+    width: 75px;
+    border-radius: 15%;
 }
 
 section.agendamento h2{
     text-align: center;
     font-family: 'Yellowtail', cursive;
     font-weight: normal;
-    font-size: 45px;
     padding: 10px 0 15px;
 }
 
@@ -321,7 +333,7 @@ section.agendamento form{
 section.agendamento form label{
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 65%;
 }
 
 section.agendamento form select,
@@ -329,6 +341,7 @@ section.agendamento form input[type=date]{
     padding: 6px;
     width: 100%;
     border: none;
+    font-size: 50%;
 }
 
 section.agendamento form input[type=date]{
@@ -341,17 +354,23 @@ section.agendamento form select{
     margin-top: 10px;
 }
 
+section.agendamento form select#horario_escolhido{
+    display: block;
+    width: 50%;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
 section.agendamento form button{
     border: none;
     background: none;
     color: white;
-    font-size: 16px;
     cursor: pointer;
     padding-bottom: 15px;
+    font-size: 50%;
 }
 
 section.agendamento form button[type=submit]{
-    font-size: 15px;
     margin-top: 55px;
 }
 
@@ -359,12 +378,15 @@ section.agendamento div.text{
     margin: 20px 0;
     width: 100%;
     text-align: center;
+    font-size: 50%;
 }
 
 section.agendamento a.voltar{
     display: block;
     max-width: 100px;
     margin-top: 55px;
+    font-size: 55%;
+    color: white;
 }
 
 section.agendamento form button[type=submit]#btn-confirmar{

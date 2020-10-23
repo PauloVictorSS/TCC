@@ -1,0 +1,16 @@
+@media (min-height: 650px){
+
+    main{
+        height: calc(100% - 157px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    section.agendamento{
+        margin: 0;
+        padding: 60px 20px;
+        max-width: 750px;
+    }
+}

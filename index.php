@@ -21,6 +21,9 @@
 
             if($url == "lista_servicos" or $url == "mapa")
                 echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos-mapa.css">';
+            else if($url == "confirmar_agendamento" or $url == "escolher_dia" or $url == "escolher_horario" or $url == "escolher_servicos"){
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-agendamento.css">';
+            }
         ?>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,94 +40,95 @@
 	
 	<body>
         <header>
-        <div class="center">
-            <div class="left titulo_texto"><a href="<?php echo INCLUDE_PATH; ?>"><h1 class="logo">Mãe e Filhas</h1></a></div>
-            <div class="left titulo_imagem"><a href="<?php echo INCLUDE_PATH; ?>"><img src="images/favicon.ico" alt="Mãe e Filhas"></a></div>
-            <nav class="desktop right">
-                <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
+            <div class="center">
+                <div class="left titulo_texto"><a href="<?php echo INCLUDE_PATH; ?>"><h1 class="logo">Mãe e Filhas</h1></a></div>
+                <div class="left titulo_imagem"><a href="<?php echo INCLUDE_PATH; ?>"><img src="images/favicon.ico" alt="Mãe e Filhas"></a></div>
+                <nav class="desktop right">
+                    <ul>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
 
-                    <?php if(isset($_SESSION["id_user"])){  ?>
+                        <?php if(isset($_SESSION["id_user"])){  ?>
 
-                    <li id="login"><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+                        <li id="login"><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+                        
+                        <?php } elseif(isset($_SESSION["id_func"])){  ?>
+
+                        <li id="login"><a href="<?php echo INCLUDE_PATH_PAINEL; ?>" id="login">ÁREA DO FUNCIONÁRIO</a></li>
+
+                        <?php } else{?>
+                        
+                        <li id="login"><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
+
+                        <?php }?>
+                    </ul>
+                </nav>
+                <nav class="mobile right">
+                    <div class="botao-menu-mobile">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="clear"></div>
+                    <ul>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
+                        
+                        <?php if(!isset($_SESSION["id_user"])){  ?>
+
+                        <li><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
+
+                        <?php }else{?>
+
+                        <li><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
+
+                        <?php }?>
+                    </ul>
+                </nav>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <main>
+            <?php
+
+                /* Verificando se uma das âncoras foi selecionada */
+
+                switch ($url) {
+                    //De acordo com a url utilizada cria um elemento com esse nome para a
+                    //futura manipulação pelo JavaScript com o JQuery
+                    case 'galeria':
+                        echo "<target target='galeria'>";
+                        break;
+
+                    case 'sobre':
+                        echo "<target target='sobre'>";
+                        break;
+
+                    case 'contato':
+                        echo "<target target='contato'>";
+                        break;
+
+                } 
+
+                //Verificando se a url escolhida existe, caso exista
+                //inclui a página da url nesse arquivo
+                if(file_exists('pages/'.$url.'.php'))
+                    include('pages/'.$url.'.php'); 
+                elseif(file_exists('pages/agendamento/'.$url.'.php'))
+                    include('pages/agendamento/'.$url.'.php');
+                else{
+                    if($url != 'galeria' && $url != 'sobre' && $url != 'contato')
+                        header("Location: pages/404.php");
+                    else
+                        include('pages/home.php');
+                }
                     
-                    <?php } elseif(isset($_SESSION["id_func"])){  ?>
-
-                    <li id="login"><a href="<?php echo INCLUDE_PATH_PAINEL; ?>" id="login">ÁREA DO FUNCIONÁRIO</a></li>
-
-                    <?php } else{?>
-                    
-                    <li id="login"><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
-
-                    <?php }?>
-                </ul>
-            </nav>
-            <nav class="mobile right">
-                <div class="botao-menu-mobile">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div class="clear"></div>
-                <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>">HOME</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>galeria" class="a_galeria">GALERIA</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>sobre" class="a_sobre">SOBRE</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>contato" class="a_contato">CONTATO</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>lista_servicos">AGENDE</a></li>
-                    
-					<?php if(!isset($_SESSION["id_user"])){  ?>
-
-                    <li><a href="<?php echo INCLUDE_PATH; ?>pages/login.php" id="login">ENTRAR</a></li>
-
-                    <?php }else{?>
-
-                    <li><a href="pages/area_do_usuario.php" id="login">ÁREA DO CLIENTE</a></li>
-
-                    <?php }?>
-                </ul>
-            </nav>
-        </div>
-        <div class="clear"></div>
-    </header>
-        <?php
-
-            /* Verificando se uma das âncoras foi selecionada */
-
-            switch ($url) {
-                //De acordo com a url utilizada cria um elemento com esse nome para a
-                //futura manipulação pelo JavaScript com o JQuery
-                case 'galeria':
-                    echo "<target target='galeria'>";
-                    break;
-
-                case 'sobre':
-                    echo "<target target='sobre'>";
-                    break;
-
-                case 'contato':
-                    echo "<target target='contato'>";
-                    break;
-
-            } 
-
-            //Verificando se a url escolhida existe, caso exista
-            //inclui a página da url nesse arquivo
-            if(file_exists('pages/'.$url.'.php'))
-                include('pages/'.$url.'.php'); 
-            elseif(file_exists('pages/agendamento/'.$url.'.php'))
-                include('pages/agendamento/'.$url.'.php');
-            else{
-                if($url != 'galeria' && $url != 'sobre' && $url != 'contato')
-                    header("Location: pages/404.php");
-                else
-                    include('pages/home.php');
-            }
-                
-        ?>
-        
+            ?>
+        </main>
 		<footer>
             <p class="tituloRod">Todos os direitos reservados</p><br>
             <p class="tituloRod">Instituto Federal <br>Câmpus Hortolândia</p>
