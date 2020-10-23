@@ -84,5 +84,5 @@ Gerenciar Paginas
             }
         ?>
     </table>
-    <aside>* Caso não tenha trabalho no dia, coloque o valor 0 *</aside>
+    <aside>* Caso não se trabalhe no dia, deixe o valor em branco *</aside>
 </div>

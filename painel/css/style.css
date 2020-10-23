@@ -232,6 +232,7 @@ section.area_func div.page div.area_trabalho div.paginas table.infs_horarios td:
     max-width: 200px;
 }
 
+
 /* Gerenciar Agendamento */
 
 section.area_func div.page div.area_trabalho div.agendamentos_feitos{
@@ -294,6 +295,10 @@ section.area_func div.page div.area_trabalho div.agendamentos_feitos table td{
 
 
 /* Gerenciamento dos serviços */
+
+section.area_func div.page div.area_trabalho div.servicos div.button-box{
+    text-align: center;
+}
 
 section.area_func div.page div.area_trabalho div.servicos table{
     width: 100%;

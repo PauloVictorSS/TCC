@@ -149,13 +149,36 @@
 							echo "$texto</p>";
 						}
                     }
+                    echo "<br><p>HORÁRIOS DE FUNCIONAMENTO:</p>";
+					
+					$consulta2 = "SELECT * FROM `horarios`WHERE hora_inicio IS NOT null AND hora_termino IS NOT null GROUP BY hora_inicio, hora_termino ORDER BY id";
+					$limite2 = mysqli_query($conexao, $consulta2);
+					if(mysqli_num_rows($limite2) != 0){
+
+						while($num_rows2 = mysqli_fetch_array($limite2)){
+							$diaInicio = $num_rows2['dia'];
+							$horaInicio = $num_rows2['hora_inicio'];
+							$horaFim = $num_rows2['hora_termino'];
+							$diaFim = '';
+							$consulta3 = "SELECT dia FROM `horarios`WHERE hora_inicio = '$horaInicio' AND hora_termino = '$horaFim' ORDER BY id DESC LIMIT 1";
+							$limite3 = mysqli_query($conexao, $consulta3);
+							if(mysqli_num_rows($limite3) != 0){
+
+								while($num_rows3 = mysqli_fetch_array($limite3)){
+									$diaFim = $num_rows3['dia'];
+								}
+							}
+
+							echo "<br><p>$diaInicio";
+
+							if($diaInicio != $diaFim){
+								echo "-$diaFim</p>";
+							}
+
+							echo "<p>$horaInicio-$horaFim</p>";
+						}
+					}
                 ?>
-                <br>
-                <p>Horários de funcionamento</p>
-                <p>Terça - Sexta</p>
-                <p>08:00 - 20:00</p>
-                <p>Sábado</p>
-                <p>08:00 - 22:00</p>
                 <br>
 				<form action="<?php echo INCLUDE_PATH; ?>" method="POST">
 					<div id="divInput" class="w50 left">
