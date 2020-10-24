@@ -3,7 +3,7 @@
     $cont = 0;
 
     //Fazendo a consulta de todos os agendamentos que tem a mesma data
-    $consulta2 = "SELECT * FROM agendamento WHERE data_agendada = '".$data_escolhida->format("d/m/Y")."' ORDER BY hora_agendada";
+    $consulta2 = "SELECT * FROM agendamento WHERE data_agendada = '".$data_escolhida->format("Y-m-d")."' ORDER BY hora_agendada";
     $result = mysqli_query($conexao, $consulta2);
 
     $qtd_agendamentos = mysqli_num_rows($result); //Nº total de agendamentos no mesmo dia

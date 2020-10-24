@@ -184,7 +184,7 @@
 					<div id="divInput" class="w50 left">
 						<input type="text" name="nome" placeholder="Nome" class="left">
 						<input type="text" name="email" placeholder="Email" class="left">
-						<input type="text" name="tel" placeholder="Telefone" class="left">
+						<input type="text" name="tel" id="telefone" placeholder="Telefone" class="left">
 					</div>
 					<textarea id="mensagem" class="w50 right" name="mens" placeholder="Digite sua mensagem aqui..."></textarea>
 					<div class="clear"></div>

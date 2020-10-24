@@ -46,11 +46,9 @@
 
         <p><b>Serviços escolhidos:</b></p>
         <?php 
-
             foreach ($nomesServicosEscolhidos as $key => $nome) {
                 echo "<p>$nome</p>";
             }
-
         ?>
 
         <br><p><b>Duração total estimada: </b><?php echo $tempo; ?></p>

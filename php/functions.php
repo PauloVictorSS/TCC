@@ -25,7 +25,7 @@
         elseif($diaSemanaIngles == 'Friday')
             return 'Sexta-feira';
         elseif($diaSemanaIngles == 'Saturday')
-            return 'Sábado-feira';
+            return 'Sábado';
 
     }
 
