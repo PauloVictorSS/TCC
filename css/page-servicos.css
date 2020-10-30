@@ -1,0 +1,13 @@
+@media (min-height: 900px){
+
+    section.servicos{
+        position: relative;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+    }
+}

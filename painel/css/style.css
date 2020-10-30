@@ -114,6 +114,7 @@ section.area_func div.page div.area_trabalho{
     background: #DCDCDC;
     width: 100%;
     min-height: 100%;
+    height: auto;
     padding: 20px;
 }
 
@@ -495,7 +496,7 @@ section.area_func div.page div.area_trabalho table#clientes td{
     }
 
     section.area_func div.page div.area_trabalho{
-        padding: 5px;
+        padding: 5px 5px 50px;
     }
 
     section.area_func div.page div.area_trabalho h2{

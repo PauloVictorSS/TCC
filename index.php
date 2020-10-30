@@ -19,8 +19,8 @@
             //Retornando a url do site
             $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
-            if($url == "lista_servicos" or $url == "mapa")
-                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos-mapa.css">';
+            if($url == "lista_servicos")
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-servicos.css">';
             else if($url == "confirmar_agendamento" or $url == "escolher_dia" or $url == "escolher_horario" or $url == "escolher_servicos"){
                 echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/page-agendamento.css">';
             }

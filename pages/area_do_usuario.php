@@ -25,7 +25,7 @@
     $tel = $infs["telefone"];
     $email = $infs["email"];
 
-    $consulta2 = "SELECT * FROM agendamento WHERE id_cliente = ".$_SESSION["id_user"]." ORDER BY data_agendamento ";
+    $consulta2 = "SELECT * FROM agendamento WHERE id_cliente = ".$_SESSION["id_user"]." ORDER BY data_agendada";
 
     $result2 = mysqli_query($conexao, $consulta2);
 
@@ -72,9 +72,6 @@
                     </div>
 
                     <div class="clear"></div>
-                    <h4>Navegação Principal:</h4>
-                </div> 
-                <div class="links">
                     <a href="<?php echo INCLUDE_PATH;?>escolher_servicos"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar um Serviço</a>
                 </div>
             </div>

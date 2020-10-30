@@ -45,9 +45,13 @@
 
 	function cloneField(){
 
-		const field = document.querySelector(".selectServicos #servicos").cloneNode(true)
+        const fields = document.querySelectorAll(".selectServicos #servicos");
 
-		document.querySelector(".selectServicos").appendChild(field)
+        if(fields.length < 7){
+            const field = document.querySelector(".selectServicos #servicos").cloneNode(true)
 
+            document.querySelector(".selectServicos").appendChild(field)
+        }
 	}
+
 </script>

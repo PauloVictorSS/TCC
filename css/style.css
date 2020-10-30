@@ -326,7 +326,7 @@ section.agendamento h2{
 
 section.agendamento form{
     display: block;
-    margin: 30px auto 0;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -371,7 +371,7 @@ section.agendamento form button{
 }
 
 section.agendamento form button[type=submit]{
-    margin-top: 55px;
+    margin-top: 100px;
 }
 
 section.agendamento div.text{
@@ -384,7 +384,7 @@ section.agendamento div.text{
 section.agendamento a.voltar{
     display: block;
     max-width: 100px;
-    margin-top: 55px;
+    margin-top: 100px;
     font-size: 55%;
     color: white;
 }
@@ -408,7 +408,7 @@ section.agendamento form button[type=submit]#btn-confirmar:hover{
 
 section.mapa{
     display: block;
-    margin: 50px auto;
+    margin: 100px auto;
     width: 90%;
     max-width: 1000px;
     padding: 20px;
@@ -578,6 +578,14 @@ section.area_func div.agendamentos table.agendamentos_feitos{
     border-collapse: collapse;
     margin: 20px auto;
     box-shadow: 4px 4px 4px #777;
+}
+
+section.area_func div.avatar-func a{
+    padding-left: 10px;
+    padding-top: 10px;
+    color: white;
+    font-size: 20px;
+    display: block;
 }
 
 section.area_func div.agendamentos table.agendamentos_feitos form button{
