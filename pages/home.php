@@ -83,7 +83,7 @@
 
 			<?php
 
-				$sql = "SELECT * FROM `fotos` WHERE statu = 1";
+				$sql = "SELECT * FROM `fotos` WHERE aprovado = 1 and statu = 1";
 				$resultado = mysqli_query($conexao, $sql);
 
 				if(mysqli_num_rows($resultado) != 0){

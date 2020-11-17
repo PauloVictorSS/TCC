@@ -6,6 +6,12 @@ body#body_area_func hr{
     margin: 5px 0;
 }
 
+img#logo{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 15%;
+}
 
 /* Area do Funcionario */
 
@@ -118,7 +124,7 @@ section.area_func div.page div.area_trabalho{
     padding: 20px;
 }
 
-section.area_func div.page div.area_trabalho button.btn-enviar{
+ div.area_trabalho button.btn-enviar{
     width: 70px;
     height: 25px;
 }
@@ -126,46 +132,55 @@ section.area_func div.page div.area_trabalho button.btn-enviar{
 
 /* Gerenciar Fotos */
 
-section.area_func div.page div.area_trabalho div.bloco{
+ div.area_trabalho h3{
+    text-align: center;
+    padding: 10px 0;
+}
+
+ div.area_trabalho h3.mensage{
+    color: rgb(39, 138, 39);
+}
+
+ div.area_trabalho div.bloco{
     width: 49%;
-    height: 400px;
+    height: 375px;
     border: 1px solid black;
     display: inline-block;
     margin-bottom: 60px; 
 }
-section.area_func div.page div.area_trabalho div.bloco+div.bloco.direita{
+ div.area_trabalho div.bloco+div.bloco.direita{
     margin-left: 2%;
 }
 
-section.area_func div.page div.area_trabalho div.bloco div.fotos{
+ div.area_trabalho div.bloco div.fotos{
     width: 100%;
-    height: 400px;
+    height: 375px;
     border: 1px solid black;
     background-size: cover;
     background-position: center;
 }
 
-section.area_func div.page div.area_trabalho div.bloco form{
+ div.area_trabalho div.bloco form{
     width: 100%;
     padding: 5px 30px;
     
 }
 
-section.area_func div.page div.area_trabalho div.bloco form button{
+ div.area_trabalho div.bloco form button{
     border: none;
     padding: 5px;
     min-width: 150px;
     cursor: pointer;
 }
 
-section.area_func div.page div.area_trabalho div.bloco form button:hover{
+ div.area_trabalho div.bloco form button:hover{
     font-weight: bold;
 }
 
 
 /* Gerenciar Serviços */
 
-section.area_func div.page div.area_trabalho div.paginas table{
+ div.area_trabalho div.paginas table{
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
@@ -173,60 +188,60 @@ section.area_func div.page div.area_trabalho div.paginas table{
     border: 1px solid black;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table form{
+ div.area_trabalho div.paginas table form{
     width: 100%;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table textarea{
+ div.area_trabalho div.paginas table textarea{
     width: 100%;
     padding: 5px;
     border: none;
     resize: vertical;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table button{
+ div.area_trabalho div.paginas table button{
     width: 100%;
     padding: 5px;
     border: none;
     text-align: center;
     cursor: pointer;
 }
-section.area_func div.page div.area_trabalho div.paginas table button:hover{
+ div.area_trabalho div.paginas table button:hover{
     font-weight: bold;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table tr th{
+ div.area_trabalho div.paginas table tr th{
     background-color: black;
     color: white;
     padding: 10px;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table tr td{
+ div.area_trabalho div.paginas table tr td{
     padding: 5px;
     border-bottom: 1px solid black;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table td:nth-child(2){
+ div.area_trabalho div.paginas table td:nth-child(2){
     width: 20%;
     text-align: center;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table td:nth-child(3){
+ div.area_trabalho div.paginas table td:nth-child(3){
     width: 70%;
 } 
 
-section.area_func div.page div.area_trabalho div.paginas table td:nth-child(4){
+ div.area_trabalho div.paginas table td:nth-child(4){
     width: 10%;
     border-left: 1px solid black;
 }
 
-section.area_func div.page div.area_trabalho div.paginas table.infs_horarios td:nth-child(3){
+ div.area_trabalho div.paginas table.infs_horarios td:nth-child(3){
     text-align: center;
 }
-section.area_func div.page div.area_trabalho div.paginas table.infs_horarios td:nth-child(3) div.input{
+ div.area_trabalho div.paginas table.infs_horarios td:nth-child(3) div.input{
     padding: 5px;
 }
-section.area_func div.page div.area_trabalho div.paginas table.infs_horarios td:nth-child(3) div.input input{
+ div.area_trabalho div.paginas table.infs_horarios td:nth-child(3) div.input input{
     text-align: center;
     padding: 2px;
     width: 100%;
@@ -236,33 +251,33 @@ section.area_func div.page div.area_trabalho div.paginas table.infs_horarios td:
 
 /* Gerenciar Agendamento */
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos{
+ div.area_trabalho div.agendamentos_feitos{
     display: inline-block;
     width: 67%;
     border-right: 1px solid black;
     padding-right: 5px;
 }
 
-section.area_func div.page div.area_trabalho div.agenda_hoje{
+ div.area_trabalho div.agenda_hoje{
     display: inline-block;
     padding-left: 5px;
     width: 33%;
 }
 
-section.area_func div.page div.area_trabalho div.agenda_hoje p{
+ div.area_trabalho div.agenda_hoje p{
     text-align: center;
     padding-bottom: 3px;
     border-bottom: 1px solid #444;
 }
 
-section.area_func div.page div.area_trabalho div.agenda_hoje div.agendamento p{
+ div.area_trabalho div.agenda_hoje div.agendamento p{
     text-align: left;
     margin-top: 10px;
     padding: 0;
     border: none;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table{
+ div.area_trabalho div.agendamentos_feitos table{
     border: 1px solid black;
     padding: 5px;
     border-collapse: collapse;
@@ -270,26 +285,26 @@ section.area_func div.page div.area_trabalho div.agendamentos_feitos table{
     margin-bottom: 30px;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr th{
+ div.area_trabalho div.agendamentos_feitos table tr th{
     text-align: center;
     background:	black;
     color: white;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr td{
+ div.area_trabalho div.agendamentos_feitos table tr td{
     background: white;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr td:nth-child(1){
+ div.area_trabalho div.agendamentos_feitos table tr td:nth-child(1){
     background: #A9A9A9;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table tr:nth-child(2) td:nth-child(1){
+ div.area_trabalho div.agendamentos_feitos table tr:nth-child(2) td:nth-child(1){
     text-align: center;
 }
 
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table th,
-section.area_func div.page div.area_trabalho div.agendamentos_feitos table td{
+ div.area_trabalho div.agendamentos_feitos table th,
+ div.area_trabalho div.agendamentos_feitos table td{
     padding: 5px;
     border: 1px solid black;
 }
@@ -297,11 +312,11 @@ section.area_func div.page div.area_trabalho div.agendamentos_feitos table td{
 
 /* Gerenciamento dos serviços */
 
-section.area_func div.page div.area_trabalho div.servicos div.button-box{
+ div.area_trabalho div.servicos div.button-box{
     text-align: center;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table{
+ div.area_trabalho div.servicos table{
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
@@ -309,11 +324,11 @@ section.area_func div.page div.area_trabalho div.servicos table{
     border: 1px solid black;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table form{
+ div.area_trabalho div.servicos table form{
     width: 100%;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table input{
+ div.area_trabalho div.servicos table input{
     width: 100%;
     padding: 5px;
     border: none;
@@ -321,43 +336,43 @@ section.area_func div.page div.area_trabalho div.servicos table input{
     text-align: center;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table button{
+ div.area_trabalho div.servicos table button{
     width: 100%;
     padding: 5px;
     border: none;
     text-align: center;
     cursor: pointer;
 }
-section.area_func div.page div.area_trabalho div.servicos table button:hover{
+ div.area_trabalho div.servicos table button:hover{
     font-weight: bold;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table tr th{
+ div.area_trabalho div.servicos table tr th{
     background-color: black;
     color: white;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table tr td{
+ div.area_trabalho div.servicos table tr td{
     padding:  10px 5px;
     border-bottom: 1px solid black;
 }
 
-section.area_func div.page div.area_trabalho div.servicos table tr th:nth-child(1),
-section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(1){
+ div.area_trabalho div.servicos table tr th:nth-child(1),
+ div.area_trabalho div.servicos table tr td:nth-child(1){
     width: 46%;
 } 
 
-section.area_func div.page div.area_trabalho div.servicos table tr th:nth-child(2),
-section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(2),
-section.area_func div.page div.area_trabalho div.servicos table tr th:nth-child(3),
-section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(3){
+ div.area_trabalho div.servicos table tr th:nth-child(2),
+ div.area_trabalho div.servicos table tr td:nth-child(2),
+ div.area_trabalho div.servicos table tr th:nth-child(3),
+ div.area_trabalho div.servicos table tr td:nth-child(3){
     width: 20%;
 } 
 
-section.area_func div.page div.area_trabalho div.servicos table tr th:nth-child(4),
-section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(4),
-section.area_func div.page div.area_trabalho div.servicos table tr th:nth-child(5),
-section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(5){
+ div.area_trabalho div.servicos table tr th:nth-child(4),
+ div.area_trabalho div.servicos table tr td:nth-child(4),
+ div.area_trabalho div.servicos table tr th:nth-child(5),
+ div.area_trabalho div.servicos table tr td:nth-child(5){
     width: 7%;
 } 
 
@@ -365,7 +380,7 @@ section.area_func div.page div.area_trabalho div.servicos table tr td:nth-child(
 
 /* Gerenciar Clientes */
 
-section.area_func div.page div.area_trabalho table#clientes{
+ div.area_trabalho table#clientes{
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
@@ -374,12 +389,12 @@ section.area_func div.page div.area_trabalho table#clientes{
     text-align: center;
 }
 
-section.area_func div.page div.area_trabalho table#clientes th{
+ div.area_trabalho table#clientes th{
     background-color: black;
     color: white;
 }
 
-section.area_func div.page div.area_trabalho table#clientes td{
+ div.area_trabalho table#clientes td{
     padding:  10px 5px;
     border-bottom: 1px solid black;
     background-color: white;
@@ -388,15 +403,15 @@ section.area_func div.page div.area_trabalho table#clientes td{
 
 @media (max-width: 1150px){
 
-    section.area_func div.page div.area_trabalho div.bloco{
+     div.area_trabalho div.bloco{
         display: block;
         margin: 0 auto;
         width: 80%;
     }
-    section.area_func div.page div.area_trabalho div.bloco+div.bloco.direita{
+     div.area_trabalho div.bloco+div.bloco.direita{
         margin: 60px auto;
     }
-    section.area_func div.page div.area_trabalho div.bloco form{
+     div.area_trabalho div.bloco form{
         padding: 5px 10px;
     }
 
@@ -404,11 +419,11 @@ section.area_func div.page div.area_trabalho table#clientes td{
 
 @media (max-width: 950px){
 
-    section.area_func div.page div.area_trabalho div.bloco{
+     div.area_trabalho div.bloco{
         width: 100%;
     }
 
-    section.area_func div.page div.area_trabalho div.agendamentos_feitos{
+     div.area_trabalho div.agendamentos_feitos{
         display: block;
         width: 100%;
         border: none;
@@ -416,7 +431,7 @@ section.area_func div.page div.area_trabalho table#clientes td{
         padding: none;
     }
     
-    section.area_func div.page div.area_trabalho div.agenda_hoje{
+     div.area_trabalho div.agenda_hoje{
         display: block;
         padding: none;
         padding-top: 5px;
@@ -424,12 +439,12 @@ section.area_func div.page div.area_trabalho table#clientes td{
         text-align: center;
     }
     
-    section.area_func div.page div.area_trabalho div.agenda_hoje p{
+     div.area_trabalho div.agenda_hoje p{
         padding-bottom: none;
         border-bottom: none;
     }
     
-    section.area_func div.page div.area_trabalho div.agenda_hoje div.agendamento p{
+     div.area_trabalho div.agenda_hoje div.agendamento p{
         text-align: center;
         margin-top: 10px;
     }
