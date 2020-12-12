@@ -61,6 +61,8 @@
 
                     <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Servicos"><i class="fa fa-book " aria-hidden="true"></i> Gerenciar Serviços</a>
                     
+                    <a href="<?php echo INCLUDE_PATH_PAINEL; ?>Gerenciar-Produtos"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Controle de Estoque</a>
+
                 </div>
                 
             </div>

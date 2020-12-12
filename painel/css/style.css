@@ -385,7 +385,7 @@ section.area_func div.page div.area_trabalho{
     border-collapse: collapse;
     margin: 0 auto;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid rgb(54, 53, 53);
     text-align: center;
 }
 
@@ -399,6 +399,70 @@ section.area_func div.page div.area_trabalho{
     border-bottom: 1px solid black;
     background-color: white;
 }
+
+/* Controle de Estoque */
+
+div.area_trabalho div.produtos div.button-box{
+    text-align: center;
+}
+
+ div.area_trabalho div.produtos table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+ div.area_trabalho div.produtos table form{
+    width: 100%;
+}
+
+ div.area_trabalho div.produtos table input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: white;
+    text-align: center;
+}
+
+ div.area_trabalho div.produtos table button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+ div.area_trabalho div.produtos table button:hover{
+    font-weight: bold;
+}
+
+ div.area_trabalho div.produtos table tr th{
+    background-color: black;
+    color: white;
+}
+
+ div.area_trabalho div.produtos table tr td{
+    padding:  10px 5px;
+    border-bottom: 1px solid black;
+}
+
+ div.area_trabalho div.produtos table tr th:nth-child(1),
+ div.area_trabalho div.produtos table tr td:nth-child(1){
+    width: 46%;
+} 
+
+ div.area_trabalho div.produtos table tr th:nth-child(2),
+ div.area_trabalho div.produtos table tr td:nth-child(2){
+    width: 20%;
+} 
+
+ div.area_trabalho div.produtos table tr th:nth-child(3),
+ div.area_trabalho div.produtos table tr td:nth-child(3),
+ div.area_trabalho div.produtos table tr th:nth-child(4),
+ div.area_trabalho div.produtos table tr td:nth-child(4){
+    width: 7%;
+} 
 
 
 @media (max-width: 1150px){
