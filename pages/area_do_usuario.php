@@ -97,7 +97,7 @@
                             $data_hoje = date('d/m/Y');
                             $id_user = $_SESSION["id_user"];
 
-                            $insercao = "INSERT INTO fotos (tamanho, id_cliente, data_post, aprovado) VALUES ('$conteudo', $id_user, '$data_hoje', 0)";
+                            $insercao = "INSERT INTO fotos (tamanho, id_cliente, data_post, aprovado, statu) VALUES ('$conteudo', $id_user, '$data_hoje', 0, 0)";
 
                             $executar = mysqli_query($conexao, $insercao);
                             if(mysqli_affected_rows($conexao) == 1)
