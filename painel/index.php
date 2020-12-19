@@ -94,7 +94,6 @@
             </div>
         </section>  
 
-        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
         <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/menu.js"></script>
 	</body>

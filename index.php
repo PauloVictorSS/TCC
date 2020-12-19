@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
         <?php
-
             //Retornando a url do site
             $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
@@ -134,9 +133,8 @@
             <p class="tituloRod">Instituto Federal <br>Câmpus Hortolândia</p>
         </footer>
 
-		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="<?php echo INCLUDE_PATH; ?>js/galeria.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>js/galeria.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
         <script src="<?php echo INCLUDE_PATH; ?>js/menu.js"></script>
 	</body>

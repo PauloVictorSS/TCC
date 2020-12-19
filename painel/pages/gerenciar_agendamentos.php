@@ -94,7 +94,7 @@ Gerenciar Agenda
     <p>Hoje: <?php echo date('d/m'); ?> </p>
 <?php
 
-    $hoje = date('d/m/Y');
+    $hoje = date('Y-m-d');
 
     $consulta2 = "SELECT * FROM agendamento WHERE data_agendada='".$hoje."' ORDER BY hora_agendada";
     $result2 = mysqli_query($conexao, $consulta2);
