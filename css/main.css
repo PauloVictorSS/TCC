@@ -1,3 +1,23 @@
+:root{
+
+    --color-mensage-red: #ce3232;
+    --color-mensage-green: rgb(39, 138, 39);
+
+    --color-blue-gray: #2F3D42;
+        
+    --color-dark-gray: #444;
+    --color-gray: #696969;
+    --color-light-gray: #A9A9A9;
+
+    --color-black: #000;
+    --color-dark-white: #DCDCDC;
+    --color-white: #fff;
+
+    --color-light-brown: #d7ccc8;
+
+    --color-alternative-one: #3D437A;
+}
+
 html, body{
     overflow-x: hidden; /* Retirando a barra de bolagem da horizontal (caso apareça) */
     height: 100%;

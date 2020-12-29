@@ -1,4 +1,5 @@
-<?php     
+<?php    
+ 
     include "../config.php";
     include "../database/conexao_mysql.php";     
 
@@ -6,7 +7,6 @@
     $result = mysqli_query($conexao, $select);
 
     $func = mysqli_fetch_array($result);
-
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +16,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Salão de Beleza Mãe e Filhas</title>
 		<meta name="description" content="Salão de Beleza">
-		<meta name="robots" content="index, follow">
-		<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/main.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
+        <?php
+            if(isset($_GET['url'])){
+
+                $url = strtolower(str_replace("-", "_", $_GET['url']));
+                echo"<link rel='stylesheet' href='".INCLUDE_PATH_PAINEL."css/$url.css'>";
+            }  
+        ?>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -27,7 +37,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Yellowtail&display=swap" rel="stylesheet">
-        <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
+
     </head>
     <body id="body_area_func">
         <section class="area_func">

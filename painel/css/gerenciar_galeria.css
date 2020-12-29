@@ -1,0 +1,41 @@
+/** Gerenciar Galeria **/
+
+div.area_trabalho h3.mensage{
+    color: var(--color-mensage-green);
+}
+
+div.area_trabalho div.bloco{
+    width: 49%;
+    height: 375px;
+    border: 1px solid var(--color-black);
+    display: inline-block;
+    margin-bottom: 60px; 
+}
+div.area_trabalho div.bloco+div.bloco.direita{
+    margin-left: 2%;
+}
+
+div.area_trabalho div.bloco div.fotos{
+    width: 100%;
+    height: 375px;
+    border: 1px solid var(--color-black);
+    background-size: cover;
+    background-position: center;
+}
+
+ div.area_trabalho div.bloco form{
+    width: 100%;
+    padding: 5px 30px;
+    
+}
+
+ div.area_trabalho div.bloco form button{
+    border: none;
+    padding: 5px;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+div.area_trabalho div.bloco form button:hover{
+    font-weight: bold;
+}

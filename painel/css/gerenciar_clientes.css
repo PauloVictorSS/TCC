@@ -1,0 +1,21 @@
+/* Gerenciar Clientes */
+
+div.area_trabalho table#clientes{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid var(--color-dark-gray);
+    text-align: center;
+}
+
+div.area_trabalho table#clientes th{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+div.area_trabalho table#clientes td{
+    padding:  10px 5px;
+    border-bottom: 1px solid var(--color-black);
+    background-color: var(--color-white);
+}

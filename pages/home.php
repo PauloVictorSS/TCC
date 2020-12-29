@@ -1,5 +1,4 @@
 <?php
-
     // Import PHPMailer classes into the global namespace
     // These must be at the top of your script, not inside a function
 
@@ -55,7 +54,6 @@
             echo "<div class='mensagem red'>Erro ao enviar o e-mail, por favor tente mais tarde</div>";
         }
     }
-
 ?>
 
 <section class="home">

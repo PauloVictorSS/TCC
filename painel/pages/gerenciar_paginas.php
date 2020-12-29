@@ -78,7 +78,7 @@ Gerenciar Paginas
 
                 echo "<tr><form action='Gerenciar-Paginas' method='POST' class='form_infs'>";
                 echo "<td>".$lista["dia"]."</td>";
-                echo "<td><div class='input'>Início:<br><input name='newInicio' value='".$lista['hora_inicio']."'><br></div></div><div class='input'>Saída:<br><input name='newTermino' value='".$lista['hora_termino']."'></div></td>";
+                echo "<td><div class='input'>Início: <input name='newInicio' value='".$lista['hora_inicio']."'><br></div></div><div class='input'>Saída: <input name='newTermino' value='".$lista['hora_termino']."'></div></td>";
                 echo "<td><button name='action2' value='".$lista['id']."' class='green'>Salvar</button></td></form></tr>";
                 
             }

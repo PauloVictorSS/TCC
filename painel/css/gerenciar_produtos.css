@@ -1,0 +1,63 @@
+/* Controle de Estoque */
+
+div.produtos div.button-box{
+    text-align: center;
+}
+
+div.produtos table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid var(--color-black);
+}
+
+div.produtos table form{
+    width: 100%;
+}
+
+div.produtos table input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: var(--color-white);
+    text-align: center;
+}
+
+div.produtos table button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+div.produtos table button:hover{
+    font-weight: bold;
+}
+
+div.produtos table tr th{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+div.produtos table tr td{
+    padding:  10px 5px;
+    border-bottom: 1px solid var(--color-black);
+}
+
+div.produtos table tr th:nth-child(1),
+div.produtos table tr td:nth-child(1){
+    width: 46%;
+} 
+
+div.produtos table tr th:nth-child(2),
+div.produtos table tr td:nth-child(2){
+    width: 20%;
+} 
+
+div.produtos table tr th:nth-child(3),
+div.produtos table tr td:nth-child(3),
+div.produtos table tr th:nth-child(4),
+div.produtos table tr td:nth-child(4){
+    width: 7%;
+} 
