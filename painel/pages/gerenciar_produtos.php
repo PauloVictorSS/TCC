@@ -31,7 +31,7 @@
 
             $id = $_POST["id"];
         
-            $nome = $_POST["nome"];
+            $nome = $_POST["nome_prod"];
             $qtd_prod = $_POST["qtd"];
 
             $select = "SELECT * FROM produtos WHERE nome = '$nome' and qtd = $qtd_prod and id = $id";

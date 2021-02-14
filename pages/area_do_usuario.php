@@ -45,9 +45,9 @@
 		<title>Salão de Beleza Mãe e Filhas</title>
 		<meta name="description" content="Salão de Beleza">
 		<meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/main.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Noto+Sans&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">

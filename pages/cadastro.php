@@ -7,24 +7,32 @@
         
         $nome = clear($_POST["nome"]);
         $senha = hash("sha512", clear($_POST["senha"]));
+        $conf_senha = hash("sha512", clear($_POST["conf_senha"]));
         $tel = clear($_POST["tel"]);
         $email = clear($_POST["email"]);
+        $conf_email = clear($_POST["conf_email"]);
 
-        $verifica = "SELECT * FROM cliente WHERE email= '$email'";
-        $resultado = mysqli_query($conexao, $verifica);
-        
-        if(mysqli_num_rows($resultado) == 0){
+        if($senha == $conf_senha){
+            if($email == $conf_email){
+                $verifica = "SELECT * FROM cliente WHERE email= '$email'";
+                $resultado = mysqli_query($conexao, $verifica);
+                
+                if(mysqli_num_rows($resultado) == 0){
 
-            $comando = "INSERT INTO cliente (nome, senha, telefone, email) VALUES ('$nome','$senha','$tel','$email')";
+                    $comando = "INSERT INTO cliente (nome, senha, telefone, email) VALUES ('$nome','$senha','$tel','$email')";
 
-			$resultado2 = mysqli_query($conexao, $comando);
-			
-			echo "<div class='mensagem green'>Cadastro feito com sucesso</div>";
-
+                    $resultado2 = mysqli_query($conexao, $comando);
+                    
+                    echo "<div class='mensagem green'>Cadastro feito com sucesso</div>";
+                }
+                else
+                    echo "<div class='mensagem red'>Este e-mail já cadastrado! Insira outro</div>";
+            }
+            else
+                echo "<div class='mensagem red'>Os campos 'Email' e 'Confirme seu email' devem ser iguais</div>";
         }
-        else{
-            echo "<div class='mensagem red'>Este e-mail já cadastrado! Insira outro</div>";
-        }
+        else
+            echo "<div class='mensagem red'>Os campos 'Senha' e 'Confirme sua senha' devem ser iguais</div>"; 
     }
 ?>
 <!DOCTYPE html>
@@ -58,8 +66,10 @@
             <form action="#" method="POST">
 
                 <input type="email" name="email" placeholder="Email" id="email" required>
+                <input type="email" name="conf_email" placeholder="Confirme seu email" id="conf_email" required>
                 <input type="text" name="nome" placeholder="Nome" id="nome" required>
                 <input type="password" name="senha" placeholder="Senha" id="senha" required>
+                <input type="password" name="conf_senha" placeholder="Confirme sua senha" id="conf_senha" required>
                 <input type="text" name="tel" placeholder="Telefone" id="tel" required>
                 
                 <input type="submit" id="btnCadastro" name="btn_action" value="Cadastrar">
