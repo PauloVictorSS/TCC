@@ -9,7 +9,7 @@ header .logo{
     font-family: 'Libre Baskerville', serif;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--color-black);
+    color: black;
     font-size: 190%;
 }
 
@@ -34,8 +34,25 @@ nav.desktop li{
 }
 
 nav.desktop a{
-    color: var(--color-black);
+    color: black;
     text-decoration: none;
+}
+
+main section.acessibilidade{
+    padding: 7px;
+    background-color: var(--color-light-brown);
+    text-align: right;
+}
+
+main section.acessibilidade button{
+    margin-right: 3%;
+    padding: 1px;
+
+    font-size: 20px;
+    background: none;
+    border: 1px solid black;
+
+    cursor: pointer;
 }
 
 
@@ -53,7 +70,7 @@ section.home div.banner div.text{
     display: block;
     width: 50%;
     margin-top: 100px;
-    color: var(--color-white);
+    color: white;
     text-align: center;
 }
 
@@ -164,7 +181,7 @@ section.home div#contato #divForm form{
 
 section.home div#contato #divForm p,
 section.home a{
-	color: var(--color-white);
+	color: white;
     font: 800 15px 'Raleway' ;
 }
 
@@ -173,7 +190,7 @@ section.home div#contato #divForm a:hover{
 }
 
 section.home div#contato #divForm h1{
-	color: var(--color-white);
+	color: white;
 	font-family: 'Yellowtail', cursive;
 	font-size: 275%
 }
@@ -185,8 +202,8 @@ section.home div#contato #divForm #divInput{
 
 section.home div#contato #divForm #divInput input{
 	background-color: var(--color-black);
-	color: var(--color-white);
-	border: 1px solid var(--color-white);
+	color: white;
+	border: 1px solid white;
 	width: 98.5%;
     padding: 7px 7px;
 }
@@ -199,8 +216,8 @@ section.home div#contato #divForm #divInput input+input{
 section.home div#contato #divForm #mensagem{
     display: block;
     background-color: var(--color-black);
-	color: var(--color-white);
-	border: 1px solid var(--color-white);
+	color: white;
+	border: 1px solid white;
 	width: 50%;
 	resize: none;
     height: 106px;
@@ -212,7 +229,7 @@ section.home div#contato #divForm input[type=submit]{
 	text-decoration: none;
 	border:none;
 	background: none;
-	color: var(--color-white);
+	color: white;
     cursor: pointer;
     margin-top: 20px;
 	font-family: 'Raleway', sans-serif;
@@ -231,7 +248,7 @@ section.servicos{
     width: 95%;
     max-width: 1000px;
     padding: 20px;
-    color: var(--color-white);
+    color: white;
     background-color: var(--color-black);
 }
 
@@ -264,11 +281,11 @@ section.servicos table form button{
 }
 
 section.servicos table form button i{
-    color: var(--color-white);
+    color: white;
 }
 
 section.servicos a{
-    color: var(--color-white);
+    color: white;
 }
 
 section.servicos a#agendarServico{
@@ -300,7 +317,7 @@ section.agendamento{
     padding: 20px;
     width: 90%;
     max-width: 500px;
-    color: var(--color-white);
+    color: white;
     background-color: var(--color-black);
     font-size: 200%;
 }
@@ -364,7 +381,7 @@ section.agendamento form select#horario_escolhido{
 section.agendamento form button{
     border: none;
     background: none;
-    color: var(--color-white);
+    color: white;
     cursor: pointer;
     padding-bottom: 15px;
     font-size: 50%;
@@ -386,13 +403,13 @@ section.agendamento a.voltar{
     max-width: 100px;
     margin-top: 100px;
     font-size: 55%;
-    color: var(--color-white);
+    color: white;
 }
 
 section.agendamento form button[type=submit]#btn-confirmar{
     display: block;
     background: var(--color-white);
-    color: var(--color-black);
+    color: black;
     text-align: center;
     padding: 7px;
     margin: 10px auto 0;
@@ -413,7 +430,7 @@ section.mapa{
     max-width: 1000px;
     padding: 20px;
     text-align: center;
-    color: var(--color-white);
+    color: white;
     background-color: var(--color-black);
 }
 
@@ -523,7 +540,7 @@ section.area_usuario div.inf-usuario div.infs p{
 section.area_usuario div.inf-usuario div.infs p b{
     padding-bottom: 8px;
     text-align: center;
-    color: var(--color-black);
+    color: black;
 }
 
 section.area_usuario div.inf-usuario table.dados_pessoais{
@@ -559,7 +576,7 @@ section.area_usuario div.inf-usuario div.buttons{
 }
 
 section.area_usuario div.inf-usuario div.buttons a{
-    color: var(--color-black);
+    color: black;
     font-size: 18px;
 }
 
@@ -583,7 +600,7 @@ section.area_func div.agendamentos table.agendamentos_feitos{
 section.area_func div.avatar-func a{
     padding-left: 10px;
     padding-top: 10px;
-    color: var(--color-white);
+    color: white;
     font-size: 20px;
     display: block;
 }
@@ -596,7 +613,7 @@ section.area_func div.agendamentos table.agendamentos_feitos form button{
 
 section.area_func div.agendamentos table.agendamentos_feitos form button i{
     font-size: 23px;
-    color: var(--color-white);
+    color: white;
 }
 
 section.area_func div.agendamentos table.agendamentos_feitos th,
@@ -632,7 +649,7 @@ footer{
 
 footer p{
     font-size: 17px;
-    color: var(--color-black);
+    color: black;
     text-align: center;
 }
 
@@ -657,7 +674,7 @@ section.erro404 h1{
 section.erro404 p, 
 section.erro404 a{
     margin-top: 30px;
-    color: var(--color-black);
+    color: black;
 }
 
 section.erro404 p a:hover{
@@ -710,11 +727,11 @@ section.erro404 p a:hover{
     }
     nav.mobile li a:hover{
         background-color: var(--color-white);
-        color: var(--color-black);
+        color: black;
     }
     .botao-menu-mobile{
         cursor: pointer;
-        color: var(--color-black);
+        color: black;
         font-size: 50px;
     }
     .botao-menu-mobile i{
@@ -732,7 +749,7 @@ section.erro404 p a:hover{
         display: block;
         width: 100%;
         margin-top: 25px;
-        color: var(--color-white);
+        color: white;
         text-align: center;
         margin-bottom: 25px;
     }

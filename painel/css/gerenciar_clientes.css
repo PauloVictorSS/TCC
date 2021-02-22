@@ -11,7 +11,7 @@ div.area_trabalho table#clientes{
 
 div.area_trabalho table#clientes th{
     background-color: var(--color-black);
-    color: var(--color-white);
+    color: white;
 }
 
 div.area_trabalho table#clientes td{

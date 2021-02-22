@@ -37,15 +37,11 @@ div.area_trabalho div.agendamentos_feitos table{
 div.area_trabalho div.agendamentos_feitos table tr th{
     text-align: center;
     background:	var(--color-black);
-    color: var(--color-white);
+    color: white;
 }
 
 div.area_trabalho div.agendamentos_feitos table tr td{
     background: var(--color-white);
-}
-
-div.area_trabalho div.agendamentos_feitos table tr td:nth-child(1){
-    background: var(--color-light-gray);
 }
 
 div.area_trabalho div.agendamentos_feitos table tr:nth-child(2) td:nth-child(1){

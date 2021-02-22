@@ -20,8 +20,12 @@
 
         <link rel="icon" href="<?php echo INCLUDE_PATH; ?>images/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/main.css">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
         <?php
+            if(isset($_SESSION["alternative_main"]))
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/alternative_main.css">';
+            else
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/main.css">';
+
             if(isset($_GET['url'])){
 
                 $url = strtolower(str_replace("-", "_", $_GET['url']));

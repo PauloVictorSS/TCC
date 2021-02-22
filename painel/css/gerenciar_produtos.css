@@ -37,7 +37,7 @@ div.produtos table button:hover{
 
 div.produtos table tr th{
     background-color: var(--color-black);
-    color: var(--color-white);
+    color: white;
 }
 
 div.produtos table tr td{

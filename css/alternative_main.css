@@ -3,19 +3,19 @@
     --color-mensage-red: #ce3232;
     --color-mensage-green: rgb(39, 138, 39);
 
-    --color-blue-gray: #2F3D42;
+    --color-blue-gray: #6D7997;
         
-    --color-dark-gray: #444;
-    --color-gray: #696969;
-    --color-light-gray: #A9A9A9;
+    --color-dark-gray: #14121A;
+    --color-gray: #9099A2;
+    --color-light-gray: #96858F;
 
-    --color-black: #000;
-    --color-dark-white: #DCDCDC;
+    --color-black: #192231;
+    --color-dark-white: #dcdcdc;
     --color-white: #fff;
 
-    --color-light-brown: #d7ccc8;
+    --color-light-brown: #d5d5d5;
 
-    --color-alternative-one: #3D437A;
+    --color-alternative-one: #986e6d;
 }
 
 html, body{
@@ -51,11 +51,6 @@ ul{
 
 img{
     max-width: 100%;
-}
-
-input{
-    background-color: var(--color-white);
-    border: 0;
 }
 
 /** Boot CSS **/

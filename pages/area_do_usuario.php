@@ -45,7 +45,12 @@
 		<title>Salão de Beleza Mãe e Filhas</title>
 		<meta name="description" content="Salão de Beleza">
 		<meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
+        <?php
+            if(isset($_SESSION["alternative_main"]))
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/alternative_main.css">';
+            else
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/main.css">';
+        ?>
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/main.css">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

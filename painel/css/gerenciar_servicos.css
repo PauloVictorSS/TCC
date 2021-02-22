@@ -38,7 +38,7 @@ div.area_trabalho div.servicos table button:hover{
 
 div.area_trabalho div.servicos table tr th{
     background-color: var(--color-black);
-    color: var(--color-white);
+    color: white;
 }
 
 div.area_trabalho div.servicos table tr td{

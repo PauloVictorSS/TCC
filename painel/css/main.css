@@ -36,7 +36,7 @@ section.area_func div.inf-func{
 	position: fixed;
 	left: 0;
     top: 0;
-    color: var(--color-white);
+    color: white;
     font-weight: 550;
 }
 
@@ -77,7 +77,7 @@ div.inf-func div.links h4{
 
 div.inf-func div.links a{
     padding-left: 10px;
-    color: var(--color-white);
+    color: white;
     font-size: 20px;
 }
 div.inf-func div.links a+a{
@@ -98,11 +98,11 @@ section.area_func div.titulo{
 }
 
 section.area_func div.titulo h1{
-    color: var(--color-white);
+    color: white;
 }
 
 section.area_func div.titulo a{
-    color: var(--color-white);
+    color: white;
 }
 
 section.area_func div.titulo a+a{

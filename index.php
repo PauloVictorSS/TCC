@@ -1,6 +1,14 @@
 <?php     
     include "config.php";
-    include "database/conexao_mysql.php";     
+    include "database/conexao_mysql.php";    
+    
+    if(isset($_POST["color"])){
+
+        if(!isset($_SESSION["alternative_main"]))
+            $_SESSION["alternative_main"] = 1;
+        else
+            unset($_SESSION["alternative_main"]);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +21,13 @@
         <meta name="robots" content="index, follow">
         
 		<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/main.css">
         <?php
+        
+            if(isset($_SESSION["alternative_main"]))
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/alternative_main.css">';
+            else
+                echo '<link rel="stylesheet" href="'.INCLUDE_PATH.'css/main.css">';
+
             //Retornando a url do site
             $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
@@ -92,6 +105,7 @@
             <div class="clear"></div>
         </header>
         <main>
+            
             <?php
 
                 /* Verificando se uma das âncoras foi selecionada */

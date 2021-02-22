@@ -1,3 +1,8 @@
+<section class="acessibilidade">
+	<form action="#" method="post">
+		<button type="submit" value="1" name="color"><i class="fa fa-paint-brush" aria-hidden="true"></i></button>
+	</form>
+</section>
 <?php
     // Import PHPMailer classes into the global namespace
     // These must be at the top of your script, not inside a function
@@ -55,7 +60,6 @@
         }
     }
 ?>
-
 <section class="home">
 		<div class="banner">
 			<div class="text">
